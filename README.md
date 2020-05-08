@@ -1,4 +1,2 @@
-# Edgine
-Edge Engine for Atmosphere
-Prova 1
-Prova 2
+# Tesi Edgine
+This repo contains the LaTex project of our master degree thesis
