@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  17 JUN 2020 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  21 JUN 2020 17:22
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -929,7 +929,7 @@ Capitolo 2.
 
 
 
-] [5]
+] [5] [6]
 Underfull \hbox (badness 6173) in paragraph at lines 88--90
 []\OT1/cmr/m/n/12 IoTedge: \OT1/cmr/m/it/12 L'ed-ge com-pu-ting puo fa-re la d
 if-fe-ren-za nel-l'a-na-li-si dei da-
@@ -941,46 +941,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--94
 bringing -[] intelligence -[]
  []
 
+[7
 
-Underfull \hbox (badness 2310) in paragraph at lines 131--133
+
+]
+Underfull \hbox (badness 2310) in paragraph at lines 150--152
 \OT1/cmr/m/n/12 ni-ca-tion and Net-works (ICCCN), Va-len-cia, Spa-gna, 2019, pa
 g. 1-6, doi:
  []
 
-[6
 
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
+[]$\OT1/cmtt/m/n/12 http : / / www . hackster . io / news / ai -[] technology -
+[] helping -[] asthma -[] sufferers -[]
+ []
 
-] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
+[8] [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
  (tesi.aux (Abstract.aux) (Introduzione.aux) (Statodellarte.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: C45B330AC5EB727CDE11EC67CC8F5E5C;97.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 255.
  ) 
 Here is how much of TeX's memory you used:
- 11969 strings out of 480896
- 213841 string characters out of 2908248
- 508256 words of memory out of 3000000
- 27562 multiletter control sequences out of 15000+200000
- 539715 words of font info for 50 fonts, out of 3000000 for 9000
+ 11991 strings out of 480896
+ 214073 string characters out of 2908248
+ 516509 words of memory out of 3000000
+ 27573 multiletter control sequences out of 15000+200000
+ 540074 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,46p,1053b,867s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,18n,46p,1229b,867s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\luca\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (15 pages, 495504 bytes).
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmtt12.pfb>
+Output written on tesi.pdf (17 pages, 522694 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
  52 words of extra memory for PDF output out of 10000 (max. 10000000)
 
