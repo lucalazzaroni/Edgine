@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  21 JUN 2020 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  9 JUL 2020 18:11
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -464,7 +464,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks30
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) (tesi.aux
-(Abstract.aux) (Introduzione.aux) (Statodellarte.aux))
+(Abstract.aux) (Introduzione.aux) (Statodellarte.aux) (Contestodisviluppo.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -483,7 +483,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
-
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count302
@@ -585,7 +584,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<paginaIniziale.pdf, id=11, 597.50829pt x 845.0471pt>
+<paginaIniziale.pdf, id=27, 597.50829pt x 845.0471pt>
 File: paginaIniziale.pdf Graphic file (type pdf)
 <use paginaIniziale.pdf>
 Package pdftex.def Info: paginaIniziale.pdf  used on input line 53.
@@ -594,7 +593,7 @@ File: paginaIniziale.pdf Graphic file (type pdf)
 <use paginaIniziale.pdf>
 Package pdftex.def Info: paginaIniziale.pdf  used on input line 53.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<paginaIniziale.pdf, id=14, page=1, 597.50829pt x 845.0471pt>
+<paginaIniziale.pdf, id=30, page=1, 597.50829pt x 845.0471pt>
 File: paginaIniziale.pdf Graphic file (type pdf)
 <use paginaIniziale.pdf, page 1>
 Package pdftex.def Info: paginaIniziale.pdf , page1 used on input line 53.
@@ -888,7 +887,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
  (Introduzione.tex
 Capitolo 1.
-<pics/edgecomputing.jpeg, id=79, 678.535pt x 381.425pt>
+<pics/edgecomputing.jpeg, id=106, 678.535pt x 381.425pt>
 File: pics/edgecomputing.jpeg Graphic file (type jpg)
 <use pics/edgecomputing.jpeg>
 Package pdftex.def Info: pics/edgecomputing.jpeg  used on input line 11.
@@ -904,12 +903,12 @@ l.15 T
 
 
 ]
-<pics/edgevscloud.jpeg, id=86, 715.17188pt x 161.85469pt>
+<pics/edgevscloud.jpeg, id=113, 715.17188pt x 161.85469pt>
 File: pics/edgevscloud.jpeg Graphic file (type jpg)
 <use pics/edgevscloud.jpeg>
 Package pdftex.def Info: pics/edgevscloud.jpeg  used on input line 18.
 (pdftex.def)             Requested size: 441.02303pt x 101.14656pt.
-<pics/edgine.png, id=87, 1267.73625pt x 543.53062pt>
+<pics/edgine.png, id=114, 1267.73625pt x 543.53062pt>
 File: pics/edgine.png Graphic file (type png)
 <use pics/edgine.png>
 Package pdftex.def Info: pics/edgine.png  used on input line 30.
@@ -930,6 +929,42 @@ Capitolo 2.
 
 
 ] [5] [6]
+\openout2 = `Contestodisviluppo.aux'.
+
+ (Contestodisviluppo.tex
+Capitolo 3.
+<pics/edgecomputingstruct.png, id=177, 2668.7203pt x 1583.9175pt>
+File: pics/edgecomputingstruct.png Graphic file (type png)
+<use pics/edgecomputingstruct.png>
+Package pdftex.def Info: pics/edgecomputingstruct.png  used on input line 5.
+(pdftex.def)             Requested size: 441.01212pt x 236.00641pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--8
+
+ []
+
+[7
+
+
+
+ <./pics/edgecomputingstruct.png>] [8]
+<pics/edgearch.png, id=187, 546.843pt x 322.20375pt>
+File: pics/edgearch.png Graphic file (type png)
+<use pics/edgearch.png>
+Package pdftex.def Info: pics/edgearch.png  used on input line 35.
+(pdftex.def)             Requested size: 441.03793pt x 236.02782pt.
+ [9]
+<pics/arduinodependent.png, id=194, 356.532pt x 118.64325pt>
+File: pics/arduinodependent.png Graphic file (type png)
+<use pics/arduinodependent.png>
+Package pdftex.def Info: pics/arduinodependent.png  used on input line 44.
+(pdftex.def)             Requested size: 356.53111pt x 118.64294pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--47
+
+ []
+
+) [10 <./pics/edgearch.png> <./pics/arduinodependent.png>] [11]
 Underfull \hbox (badness 6173) in paragraph at lines 88--90
 []\OT1/cmr/m/n/12 IoTedge: \OT1/cmr/m/it/12 L'ed-ge com-pu-ting puo fa-re la d
 if-fe-ren-za nel-l'a-na-li-si dei da-
@@ -941,7 +976,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--94
 bringing -[] intelligence -[]
  []
 
-[7
+[12
 
 
 ]
@@ -956,25 +991,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--162
 [] helping -[] asthma -[] sufferers -[]
  []
 
-[8] [9]
+[13] [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 255.
- [10]
+ [15]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 255.
- (tesi.aux (Abstract.aux) (Introduzione.aux) (Statodellarte.aux))
+ (tesi.aux (Abstract.aux) (Introduzione.aux) (Statodellarte.aux)
+(Contestodisviluppo.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 255.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 255.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: C45B330AC5EB727CDE11EC67CC8F5E5C;97.
+(rerunfilecheck)             Checksum: C7F7FC1C80611B87EA374C5D94E3841A;333.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 255.
  ) 
 Here is how much of TeX's memory you used:
- 11991 strings out of 480896
- 214073 string characters out of 2908248
- 516509 words of memory out of 3000000
- 27573 multiletter control sequences out of 15000+200000
+ 12049 strings out of 480896
+ 215292 string characters out of 2908248
+ 517172 words of memory out of 3000000
+ 27609 multiletter control sequences out of 15000+200000
  540074 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,46p,1229b,867s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,18n,46p,1229b,863s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\luca\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:
@@ -985,9 +1021,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
 e1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb>
-Output written on tesi.pdf (17 pages, 522694 bytes).
+Output written on tesi.pdf (22 pages, 825391 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 52 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,3 +5,7 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Confronto tra Edge e Cloud Computing}}{2}{figure.1.2}%
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Edge Engine per PC}}{3}{figure.1.3}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ecosistema IoT basato sull'Edge Computing}}{7}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architettura Edge Engine - Measurify}}{10}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esempio di codice dipendente dalla piattaforma nella classe \textit {Connection}}}{10}{figure.3.3}%
