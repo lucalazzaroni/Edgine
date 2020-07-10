@@ -9,3 +9,5 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ecosistema IoT basato sull'Edge Computing}}{7}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Architettura Edge Engine - Measurify}}{10}{figure.3.2}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Esempio di codice dipendente dalla piattaforma nella classe \textit {Connection}}}{10}{figure.3.3}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Confronto tra le due implementazioni del metodo \textit {isConnected}}}{17}{figure.4.1}%

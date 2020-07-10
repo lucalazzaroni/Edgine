@@ -4,3 +4,8 @@
 \BOOKMARK [1][-]{section.3.1}{Measurify}{chapter.3}% 4
 \BOOKMARK [1][-]{section.3.2}{Edge Engine}{chapter.3}% 5
 \BOOKMARK [1][-]{section.3.3}{Evoluzione del progetto}{chapter.3}% 6
+\BOOKMARK [0][-]{chapter.4}{Implementazione}{}% 7
+\BOOKMARK [1][-]{section.4.1}{Librerie POCO}{chapter.4}% 8
+\BOOKMARK [2][-]{subsection.4.1.1}{Installazione}{section.4.1}% 9
+\BOOKMARK [1][-]{section.4.2}{Utilizzo}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.3}{Classi wrapper}{chapter.4}% 11
