@@ -10,7 +10,7 @@ In un contesto di Edge Computing, un ecosistema IoT necessita di tre componenti 
 \section{Measurify}
 Measurify è il server Cloud che è stato impiegato per questo progetto: una piattaforma Cloud-based, astratta e measurement-oriented creata dall'Elios Lab dell'Università degli Studi di Genova per gestire oggetti intelligenti negli ecosistemi IoT. Measurify modella gli oggetti intelligenti come risorse web esponendole attraverso API che rispettano un'architettura REST (REpresentational State Transfer). In questo modo l'accesso remoto a dati e risorse avviene attraverso un'interfaccia HTTP(S), indipendente dalla piattaforma, per supportare lo sviluppo di applicazioni che si servono di tali oggetti. Le risorse delle API associate al dispositivo specifico sul quale il motore è in esecuzione sono configurabili da remoto con un'applicazione client (ad esempio una web application) che le modifica per gestire l'engine. \\
 Per poter accedere a Measurify sono necessari un username ed una password che permettono di ricevere un token di sicurezza. Nel caso in questione si tratta di un JSON Web Token (JWT), che andrà inserito nell'header di tutte le richieste HTTP(S) successive per garantirne l'autorizzazione.\\
-All'interno di Measurify è presente una struttura descrittiva dei dispositivi associati al proprio username. Questa è composta da diversi campi che definiscono l'oggetto in questione:
+All'interno di Measurify è presente una struttura descrittiva dei dispositivi associati al proprio username  (si veda fig. \ref{cloudAPI}). Questa è composta da diversi campi che definiscono l'oggetto in questione:
 \begin{itemize}
 	\item \textbf{Thing}: è  l'oggetto generico che è soggetto a misurazioni da parte dei dispositivi (ad esempio una persona, una macchina, una casa, una città, ecc.);
 	\item \textbf{Feature}: è la grandezza fisica misurata da un dispositivo (ad esempio il battito cardiaco, la temperatura ambientale, ecc.);
@@ -20,7 +20,12 @@ All'interno di Measurify è presente una struttura descrittiva dei dispositivi a
 	\item \textbf{Measurement}: è il valore di una grandezza fisica misurato dal sensore
 	di un dispositivo per uno specifico oggetto;
 \end{itemize}
-\newpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{pics/cloudAPI}
+	\caption{Architettura del server Cloud Measurify}
+	\label{cloudAPI}
+\end{figure}
 \section{Edge Engine}
 L'Edge Engine e composto da una serie di funzioni unite in un motore di esecuzione che viene eseguito su un host perimetrale. Il progetto è nato inizialmente con lo scopo di essere eseguito su piattaforme di fascia bassa. Di conseguenza, la prima versione ne prevedeva l’utilizzo solo su scheda di sviluppo ESP32-DevKitC V4 con modulo ESP32-WROVER-B su piattaforma Arduino, mantenendo però la possibilità di un futuro adattamento del codice a più dispositivi, come sarà mostrato nel capitolo successivo.\\
 Il funzionamento dell'engine si può riassumere in macro-processi: accesso al Cloud, richiesta della propria descrizione virtuale, richiesta degli scripts da eseguire, lettura dati dai sensori, elaborazione locale dei dati, memorizzazione dei dati e invio degli stessi al Cloud.\\
@@ -36,6 +41,7 @@ In figura \ref{edgecloud} è possibile vedere una struttura schematica dell'arch
 	\caption{Architettura Edge Engine - Measurify}
 	\label{edgecloud}
 \end{figure}
+\newpage
 \section{Evoluzione del progetto}
 A partire dal progetto Edge Engine per Arduino, l’intento è quello di realizzare un prodotto multipiattaforma per dispositivi di tipo PC (Windows/Linux/MacOS).\\
 La prima versione di Edge Engine nasce per essere utilizzata esclusivamente su dispositivi Arduino, pertanto, nonostante la maggior parte delle classi sia indipendente dalla piattaforma, ne restano due, \textit{APIRest} e \textit{Connection}, specifiche per Arduino. La prima si occupa di gestire le richieste HTTP da e verso il Cloud, mentre la seconda di gestire il modulo WiFi. Entrambe, dal momento che i task che eseguono necessitano di librerie esterne specifiche, sono giocoforza legate alla piattaforma sulla quale vengono eseguite (si veda fig. \ref{arduinodep}). Pertanto, il primo passo per rendere il codice multipiattaforma sarà creare ulteriori classi wrapper \textit{APIRest\_windows} e \textit{Connection\_windows}, affinché si generalizzi sempre di più questo aspetto dell'Edge Engine.\\
