@@ -14,15 +14,16 @@
 \usepackage{pdfpages}
 \usepackage{titlesec}
 \usepackage{wrapfig}
+\usepackage{tabularx}
 \addto\captionsitalian{\renewcommand{\bibname}{Riferimenti bibliografici e sitografici}}
 
 \usepackage{geometry}
 \geometry{
 	a4paper,
-	total={155mm,237mm},
-	left=35mm,
+	total={140mm,237mm},
+	left=40mm,
 	top=30mm,
-	right=20mm,
+	right=30mm,
 	bottom=30mm
 }
 
@@ -77,12 +78,13 @@
 \include{Abstract}
 \tableofcontents
 \listoffigures
+\listoftables
 \mainmatter
 \include{Introduzione}
 \include{Statodellarte}
 \include{Contestodisviluppo}
 \include{Implementazione}
-%\include{TestSperimentali}
+\include{Esperimenti}
 %\include{ConclusionieLavoriFuturi}
 
 \begin{thebibliography}{9}

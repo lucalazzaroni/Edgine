@@ -11,16 +11,16 @@ In primo luogo, come da istruzioni del sito POCO, si è tentata l’installazion
 Nonostante su VCPKG fosse presente il supporto alla compilazione di tali librerie tramite g++, il processo si interrompeva intorno al 70\% a causa del seguente errore:\\
 \begin{verbatim}
 In file included 
-        from C:/mingw/mingw64/x86_64-w64-mingw32/include/mprapi.h:16,
-        from C:/mingw/mingw64/x86_64-w64-mingw32/include/iprtrmib.h:12,
-        from C:/mingw/mingw64/x86_64-w64-mingw32/include/Iphlpapi.h:15,
-        from C:/poco/Foundation/include/Poco/UnWindows.h:33,
-        from C:/poco/Foundation/include/Poco/Platform_WIN32.h:22,
-        from C:/poco/Foundation/include/Poco/Foundation.h:100,
-        from C:/poco/Net/include/Poco/Net/ICMPPacket.h:21,
-        from C:\poco\Net\src\ICMPPacket.cpp:15:
-C:/poco/Net/include/Poco/Net/ICMPv4PacketImpl.h:72:3: error: expected 
-identifier before '(' token
+  from C:/mingw/mingw64/x86_64-w64-mingw32/include/mprapi.h:16       
+  from C:/mingw/mingw64/x86_64-w64-mingw32/include/iprtrmib.h:12,
+  from C:/mingw/mingw64/x86_64-w64-mingw32/include/Iphlpapi.h:15,
+  from C:/poco/Foundation/include/Poco/UnWindows.h:33,
+  from C:/poco/Foundation/include/Poco/Platform_WIN32.h:22,
+  from C:/poco/Foundation/include/Poco/Foundation.h:100,
+  from C:/poco/Net/include/Poco/Net/ICMPPacket.h:21,
+  from C:\poco\Net\src\ICMPPacket.cpp:15:
+C:/poco/Net/include/Poco/Net/ICMPv4PacketImpl.h:72:3: error: 
+expected identifier before '(' token
    TIMESTAMP_REQUEST,
    ^~~~~~~~~~~~~~~~~
    
@@ -60,7 +60,7 @@ Per poter usufruire delle librerie POCO precedentemente installate su dispositiv
 \begin{verbatim}
 path\to\mingw64\bin\g++.exe 
 -g 
-path\to\EdgeEngine_library\examples\CC\EdgeEdgine\EdgineExample.cpp
+path\to\EdgeEngine_library\examples\EdgineExample.cpp
 path\to\EdgeEngine_library\src\connection_windows.cpp
 path\to\EdgeEngine_library\src\sample.cpp
 path\to\EdgeEngine_library\src\APIRest_windows.cpp
@@ -131,27 +131,47 @@ Essa consiste semplicemente nella definizione della macro \textit{ARDUINO} nel c
 	\label{ifdef}
 \end{figure}
 In questa specifica situazione, nel caso in cui, come in figura, sia definita la macro \textit{ARDUINO}, verranno create istanze delle classi \textit{Connection} e \textit{APIRest}, altrimenti delle classi \textit{Connection\_windows} e \textit{APIRest\_windows}.
-\section{Esempio di prova}
+\section{Esempio di prova}\label{prova}
 Dopo aver ultimato l’implementazione delle classi citate in precedenza, si è deciso di sviluppare un semplice \textit{main} per PC che simulasse un’applicazione IoT per il monitoraggio della temperatura, al fine di testare quanto realizzato.\\
 Il device simulato possiede una feature: temperature. In prima istanza è necessario impostare tutti i parametri della descrizione virtuale e creare all'interno del Cloud la risorsa che rappresenti il dispositivo d’interesse. Dopodiché bisogna costruire gli scripts che si intende eseguire sui flussi di dati e assegnarli alla risorsa precedentemente creata sulle API di tale dispositivo. È necessario inoltre creare un utente (parametri username e password nel codice) sul Cloud attraverso il quale l'engine potrà autenticarsi.\\
-Il \textit{main} è suddiviso in due fasi principali, associate alle funzioni  \textit{setup} e  \textit{loop} che richiamano la configurazione tipica degli sketch Arduino. Le procedure da svolgere nella funzione  \textit{setup} sono la configurazione del sensore, l'avvio della connessione Internet e l'assegnazione dei parametri alla struttura dati \textit{options} per inizializzare l'engine. Nella funzione \textit{loop} invece, è disposta la creazione dei sample (connotati da features, data e valore letto dai sensori), poi processati dall'engine tramite gli script ricevuti dal Cloud.\\
+Il \textit{main} è suddiviso in due fasi principali, associate alle funzioni  \textit{setup} e  \textit{loop} che richiamano la configurazione tipica degli sketch Arduino. Le procedure da svolgere nella funzione  \textit{setup} sono la configurazione del sensore, l'avvio della connessione Internet e l'assegnazione dei parametri alla struttura dati \textit{options} per inizializzare l'engine. Nella funzione \textit{loop} invece, è disposta la creazione dei sample (connotati da features, data e valore letto dai sensori), poi processati dall'engine tramite gli script ricevuti dal Cloud. Tali script vengono eseguiti ciclicamente e il risultato delle operazioni portate a termine viene conservato sul Cloud. Il processo di interazione Cloud-Edge appena descritto è riassunto nella tabella \ref{loop}. In questo specifico caso, siccome si tratta di un esempio di test e non di un'applicazione reale, la funzione \textit{loop} viene eseguita una volta sola, dal momento che l'interesse è di verificare il funzionamento di un singolo script.\\
 Già da un esempio semplice come quello appena descritto, ci si può rendere conto di come la realizzazione di un'applicazione IoT servendosi di Edge Engine riduca in maniera drastica la quantità di codice da produrre e il tempo di sviluppo del software. Esso fornisce la possibilità non solo di eseguire in locale gli scripts caricati da remoto, ma anche di inviare e ricevere delle informazioni dal Cloud e gestire eventuali malfunzionamenti comunicandone l'avvenimento al server online.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Request} & \textbf{Task} & \textbf{Descrizione}\\
+		\hline
+		\textbf{POST} & Credenziali di Login & Viene ricevuto il JWT dal Cloud\\
+		\hline
+		\textbf{GET} & Descrizione del device & Gli script vengono recuperati dal Cloud\\
+		\hline
+		\textbf{POST} & Measurements & I dati vengono salvati sul Cloud\\	
+		\hline
+	\end{tabular}
+	\caption{Le HTTP requests generalmente eseguite da Edge Engine}
+	\label{loop}
+\end{table}
 \section{Creazione della libreria}
 Come è stato possibile notare nella sezione \ref{utilizzo}, il sistema, per poter essere utilizzato, necessita della compilazione di tutte le classi del progetto, andando dunque a rendere obbligatoria anche la presenza dei file \textit{.cpp} oltre agli header all'interno del proprio ambiente di sviluppo. Questa procedura è assai utile in fase di sviluppo del sistema, dal momento che in questo modo è possibile agire direttamente sulle classi in caso di errori o necessità di cambiamenti al codice. Tuttavia, non lo è altrettanto nel caso di utilizzo dell'Edge Engine da parte di sviluppatori che desiderino farne uso senza volontà di applicare modifiche al codice sorgente o qualora si desideri che la propria implementazione dei vari metodi non sia visibile a chi ne usufruisce.\\
 Di conseguenza, si è deciso di creare un file \textit{.lib} grazie al quale è facilitata la fruizione del sistema da parte di altri sviluppatori e, al contempo, viene nascosta la realizzazione relativa alle classi appartenenti al progetto.\\
 Di seguito vengono mostrati i passaggi che è necessario eseguire per ottenere il file \textit{.lib} a partire dal codice sorgente:
 \begin{verbatim}
 g++ -c APIRest_windows.cpp 
-      -Ipath\to\EdgeEngine_library\src -Ipath\to\msys64\mingw64\include 
+      -Ipath\to\EdgeEngine_library\src 
+      -Ipath\to\msys64\mingw64\include 
 g++ -c connection_windows.cpp 
-      -Ipath\to\EdgeEngine_library\src -Ipath\to\msys64\mingw64\include 
+      -Ipath\to\EdgeEngine_library\src 
+      -Ipath\to\msys64\mingw64\include 
 
 [...]
 
 g++ -c window.cpp
-      -Ipath\to\EdgeEngine_library\src -Ipath\to\msys64\mingw64\include 
+      -Ipath\to\EdgeEngine_library\src 
+      -Ipath\to\msys64\mingw64\include 
  
-ar rcs Edgine.lib APIRest_windows.o connection_windows.o [...] window.o
+ar rcs Edgine.lib APIRest_windows.o connection_windows.o [...] 
+      window.o
 \end{verbatim}
 I primi passaggi, da ripetere per ogni classe presente all'interno del progetto, producono per ognuna il relativo file in formato \textit{.o}, necessario per la successiva creazione del \textit{.lib}. Il comando \textit{ar} poi, a partire da i file \textit{.o} appena creati, genera la libreria \textit{Edgine.lib}.\\
 Infine, per poterla utilizzare all'interno del proprio progetto, sono necessarie le seguenti direttive per il compilatore:
