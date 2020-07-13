@@ -1,22 +1,22 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Stato dell'Arte}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Contesto di sviluppo}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Measurify}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Edge Engine}{9}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Evoluzione del progetto}{11}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Implementazione}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Librerie POCO}{12}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Installazione}{12}{subsection.4.1.1}%
-\contentsline {subsubsection}{VCPKG, CMake, Conan}{13}{subsection.4.1.1}%
-\contentsline {subsubsection}{MSYS2}{14}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Utilizzo}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Classi wrapper}{16}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Connection\_windows}{16}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}APIRest\_windows}{17}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}myDefines.h}{18}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Esempio di prova}{19}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Creazione della libreria}{20}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Esperimenti}{22}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Applicazione Windows}{22}{section.5.1}%
+\contentsline {chapter}{\numberline {2}Stato dell'Arte}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Contesto di sviluppo}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Measurify}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Edge Engine}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Evoluzione del progetto}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Implementazione}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Librerie POCO}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Installazione}{16}{subsection.4.1.1}%
+\contentsline {subsubsection}{VCPKG, CMake, Conan}{16}{subsection.4.1.1}%
+\contentsline {subsubsection}{MSYS2}{18}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Utilizzo}{19}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Classi wrapper}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Connection\_windows}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}APIRest\_windows}{22}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}myDefines.h}{24}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Esempio di prova}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Creazione della libreria}{26}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Esperimenti}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Applicazione Windows}{28}{section.5.1}%

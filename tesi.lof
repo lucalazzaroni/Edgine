@@ -2,18 +2,18 @@
 \babel@toc {italian}{}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Struttura dell'Edge Computing}}{2}{figure.1.1}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Confronto tra Edge e Cloud Computing}}{2}{figure.1.2}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Edge Engine per PC}}{3}{figure.1.3}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Confronto tra Edge e Cloud Computing}}{3}{figure.1.2}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Edge Engine per PC}}{4}{figure.1.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ecosistema IoT basato sull'Edge Computing}}{7}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Architettura del server Cloud Measurify}}{9}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Architettura Edge Engine - Measurify}}{10}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Esempio di codice dipendente dalla piattaforma nella classe \textit {Connection}}}{11}{figure.3.4}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ecosistema IoT basato sull'Edge Computing}}{9}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architettura del server Cloud Measurify}}{11}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Architettura Edge Engine - Measurify}}{13}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Esempio di codice dipendente dalla piattaforma nella classe \textit {Connection}}}{14}{figure.3.4}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Confronto tra le due implementazioni del metodo \textit {isConnected}}}{17}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Confronto tra le due implementazioni del metodo \textit {PostLogin}}}{18}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces myDefines.h}}{18}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Esempio di utilizzo della direttiva \textit {ifdef}}}{19}{figure.4.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Confronto tra le due implementazioni del metodo \textit {isConnected}}}{22}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Confronto tra le due implementazioni del metodo \textit {PostLogin}}}{23}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces myDefines.h}}{24}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Esempio di utilizzo della direttiva \textit {ifdef}}}{24}{figure.4.4}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces La struttura dello script \textit {ram-available-to-mb}}}{23}{figure.5.1}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Dato relativo al valore di memoria RAM disponibile convertito in MB e conservato sul Cloud}}{31}{figure.5.1}%
