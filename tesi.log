@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  14 JUL 2020 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  14 JUL 2020 18:19
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -604,7 +604,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<paginaIniziale.pdf, id=83, 597.50829pt x 845.0471pt>
+<paginaIniziale.pdf, id=87, 597.50829pt x 845.0471pt>
 File: paginaIniziale.pdf Graphic file (type pdf)
 <use paginaIniziale.pdf>
 Package pdftex.def Info: paginaIniziale.pdf  used on input line 66.
@@ -613,7 +613,7 @@ File: paginaIniziale.pdf Graphic file (type pdf)
 <use paginaIniziale.pdf>
 Package pdftex.def Info: paginaIniziale.pdf  used on input line 66.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<paginaIniziale.pdf, id=86, page=1, 597.50829pt x 845.0471pt>
+<paginaIniziale.pdf, id=90, page=1, 597.50829pt x 845.0471pt>
 File: paginaIniziale.pdf Graphic file (type pdf)
 <use paginaIniziale.pdf, page 1>
 Package pdftex.def Info: paginaIniziale.pdf , page1 used on input line 66.
@@ -740,7 +740,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [2]
 \openout2 = `Abstract.aux'.
 
- (Abstract.tex)
+ (Abstract.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
@@ -749,55 +749,56 @@ This may cause the page layout to be inconsistent, however.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 88.
+(hyperref)                removing `\begingroup' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `math shift' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 88.
+(hyperref)                removing `\mathsurround' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 88.
+(hyperref)                removing `\z@' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `math shift' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 88.
+(hyperref)                removing `\endgroup' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 88.
+(hyperref)                removing `\begingroup' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `math shift' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 88.
+(hyperref)                removing `\mathsurround' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 88.
+(hyperref)                removing `\z@' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 88.
+(hyperref)                removing `math shift' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 88.
+(hyperref)                removing `\endgroup' on input line 15.
 
 [3
 
-] (tesi.toc)
+
+]) (tesi.toc)
 \tf@toc=\write4
 \openout4 = `tesi.toc'.
 
@@ -851,6 +852,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\endgroup' on input line 92.
 
 [4
+
 
 
 ] (tesi.lof)
@@ -980,12 +982,12 @@ l.7 	\item \textbf
 
 
 ]
-<pics/edgecomputing.jpeg, id=206, 678.535pt x 381.425pt>
+<pics/edgecomputing.jpeg, id=217, 678.535pt x 381.425pt>
 File: pics/edgecomputing.jpeg Graphic file (type jpg)
 <use pics/edgecomputing.jpeg>
 Package pdftex.def Info: pics/edgecomputing.jpeg  used on input line 12.
 (pdftex.def)             Requested size: 398.3386pt x 223.91551pt.
-<pics/edgevscloud.jpeg, id=208, 715.17188pt x 161.85469pt>
+<pics/edgevscloud.jpeg, id=219, 715.17188pt x 161.85469pt>
 File: pics/edgevscloud.jpeg Graphic file (type jpg)
 <use pics/edgevscloud.jpeg>
 Package pdftex.def Info: pics/edgevscloud.jpeg  used on input line 19.
@@ -996,7 +998,7 @@ been already used, duplicate ignored
                    \relax 
 l.22 \end{figure}
                   [2 <./pics/edgecomputing.jpeg>]
-<pics/edgine.png, id=213, 1267.73625pt x 543.53062pt>
+<pics/edgine.png, id=224, 1267.73625pt x 543.53062pt>
 File: pics/edgine.png Graphic file (type png)
 <use pics/edgine.png>
 Package pdftex.def Info: pics/edgine.png  used on input line 31.
@@ -1015,7 +1017,7 @@ Capitolo 2.
 
  (Contestodisviluppo.tex
 Capitolo 3.
-<pics/edgecomputingstruct.png, id=280, 2668.7203pt x 1583.9175pt>
+<pics/edgecomputingstruct.png, id=291, 2668.7203pt x 1583.9175pt>
 File: pics/edgecomputingstruct.png Graphic file (type png)
 <use pics/edgecomputingstruct.png>
 Package pdftex.def Info: pics/edgecomputingstruct.png  used on input line 6.
@@ -1030,18 +1032,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
 
  <./pics/edgecomputingstruct.png>] [10]
-<pics/cloudAPI.png, id=290, 523.9575pt x 326.4195pt>
+<pics/cloudAPI.png, id=301, 523.9575pt x 326.4195pt>
 File: pics/cloudAPI.png Graphic file (type png)
 <use pics/cloudAPI.png>
 Package pdftex.def Info: pics/cloudAPI.png  used on input line 25.
 (pdftex.def)             Requested size: 398.3386pt x 248.16606pt.
-<pics/edgearch.png, id=293, 546.843pt x 322.20375pt>
+<pics/edgearch.png, id=304, 546.843pt x 322.20375pt>
 File: pics/edgearch.png Graphic file (type png)
 <use pics/edgearch.png>
 Package pdftex.def Info: pics/edgearch.png  used on input line 40.
 (pdftex.def)             Requested size: 398.35765pt x 206.1507pt.
  [11 <./pics/cloudAPI.png>] [12]
-<pics/arduinodependent.png, id=305, 356.532pt x 118.64325pt>
+<pics/arduinodependent.png, id=316, 356.532pt x 118.64325pt>
 File: pics/arduinodependent.png Graphic file (type png)
 <use pics/arduinodependent.png>
 Package pdftex.def Info: pics/arduinodependent.png  used on input line 49.
@@ -1090,13 +1092,13 @@ h:15,[]
  []
 
 [16] [17] [18] [19]
-<pics/connAW.png, id=351, 951.555pt x 566.115pt>
+<pics/connAW.png, id=362, 951.555pt x 566.115pt>
 File: pics/connAW.png Graphic file (type png)
 <use pics/connAW.png>
 Package pdftex.def Info: pics/connAW.png  used on input line 103.
 (pdftex.def)             Requested size: 398.3386pt x 236.98924pt.
  [20] [21]
-<pics/APIRestAW.png, id=361, 1108.8928pt x 703.87968pt>
+<pics/APIRestAW.png, id=372, 1108.8928pt x 703.87968pt>
 File: pics/APIRestAW.png Graphic file (type png)
 <use pics/APIRestAW.png>
 Package pdftex.def Info: pics/APIRestAW.png  used on input line 113.
@@ -1107,13 +1109,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--116
  []
 
 [22 <./pics/connAW.png>]
-<pics/myDefines.png, id=366, 138.5175pt x 100.87688pt>
+<pics/myDefines.png, id=377, 138.5175pt x 100.87688pt>
 File: pics/myDefines.png Graphic file (type png)
 <use pics/myDefines.png>
 Package pdftex.def Info: pics/myDefines.png  used on input line 121.
 (pdftex.def)             Requested size: 138.51715pt x 100.87662pt.
  [23 <./pics/APIRestAW.png>]
-<pics/ifdef.png, id=374, 254.75175pt x 133.6995pt>
+<pics/ifdef.png, id=385, 254.75175pt x 133.6995pt>
 File: pics/ifdef.png Graphic file (type png)
 <use pics/ifdef.png>
 Package pdftex.def Info: pics/ifdef.png  used on input line 129.
@@ -1203,7 +1205,7 @@ Overfull \hbox (1.30063pt too wide) in paragraph at lines 28--51
 [][] 
  []
 
-<pics/datowin.png, id=404, 277.035pt x 272.51813pt>
+<pics/datowin.png, id=415, 277.035pt x 272.51813pt>
 File: pics/datowin.png Graphic file (type png)
 <use pics/datowin.png>
 Package pdftex.def Info: pics/datowin.png  used on input line 61.
@@ -1214,65 +1216,86 @@ Overfull \hbox (3.0366pt too wide) in paragraph at lines 87--87
 vice,[] 
  []
 
-) [34]
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+<pics/ring.png, id=437, 299.31825pt x 196.3335pt>
+File: pics/ring.png Graphic file (type png)
+<use pics/ring.png>
+Package pdftex.def Info: pics/ring.png  used on input line 94.
+(pdftex.def)             Requested size: 329.2511pt x 215.9675pt.
+[34]
+Overfull \hbox (1.75095pt too wide) in paragraph at lines 101--115
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--115
+
+ []
+
+[35 <./pics/ring.png>]
+<pics/unityscriptvars.png, id=451, 226.446pt x 125.268pt>
+File: pics/unityscriptvars.png Graphic file (type png)
+<use pics/unityscriptvars.png>
+Package pdftex.def Info: pics/unityscriptvars.png  used on input line 123.
+(pdftex.def)             Requested size: 192.48pt x 106.47829pt.
+ [36 <./pics/unityscriptvars.png>]) [37]
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 []$\OT1/cmtt/m/n/12 https : / / www . iotedge . it / edge -[] platform / ledge 
 -[] computing -[] puo -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
 []$\OT1/cmtt/m/n/12 https : / / cloud . google . com / blog / products / gcp / 
 bringing -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
 []$\OT1/cmtt/m/n/12 https : / / docs . aws . amazon . com / it _ it / lambda / 
 latest / dg / welcome .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 []$\OT1/cmtt/m/n/12 https : / / www . microsoft . com / en -[] us / research / 
 project / project -[]
  []
 
-[35
+[38
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 []$\OT1/cmtt/m/n/12 https : / / www . redhat . com / it / technologies / cloud 
 -[] computing /
  []
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
 []$\OT1/cmtt/m/n/12 http : / / www . hackster . io / news / ai -[] technology -
 [] helping -[] asthma -[]
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
-[37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
+[40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
  (tesi.aux (Abstract.aux) (Introduzione.aux) (Statodellarte.aux)
 (Contestodisviluppo.aux) (Implementazione.aux) (Esperimenti.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 214.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 56124F6F656CFFD09650EF7EF58E3596;1209.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
+(rerunfilecheck)             Checksum: 82D761EBF1152BD8649D568B96FC03AA;1286.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
  ) 
 Here is how much of TeX's memory you used:
- 12227 strings out of 480896
- 217641 string characters out of 2908248
- 519067 words of memory out of 3000000
- 27727 multiletter control sequences out of 15000+200000
+ 12255 strings out of 480896
+ 218086 string characters out of 2908248
+ 519295 words of memory out of 3000000
+ 27746 multiletter control sequences out of 15000+200000
  540679 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,46p,1695b,874s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,18n,46p,1695b,884s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\luca\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:
@@ -1283,9 +1306,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
 e1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb>
-Output written on tesi.pdf (45 pages, 1077131 bytes).
+Output written on tesi.pdf (48 pages, 1136041 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 562 PDF objects out of 1000 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

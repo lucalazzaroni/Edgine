@@ -19,7 +19,7 @@ Come accennato brevemente nella sezione \ref{prova}, in primo luogo è necessari
 		\hline
 	\end{tabular}
 \\\\url = \url{http://students.atmosphere.tools/}
-	\caption{Parametri Measurify}
+	\caption{Parametri Measurify della risorsa Windows}
 	\label{paramMeas}
 \end{table}
 Il device \textit{pc-probe} contiene all'interno della sua descrizione le features e gli script ad esso associati. Le prime indicano le grandezze fisiche misurabili dal dispositivo, mentre i secondi rappresentano le funzioni di elaborazione che è possibile applicare ai dati ricevuti. \\
@@ -48,7 +48,7 @@ La tabella \ref{script} mostra la struttura degli script implementati. Essi sono
 		average-hourly-available-ram & available-ram(6m).window(+,0,10).map(a/10).send()\\
 		\hline
 	\end{tabular}
-	\caption{Gli script correlati al device \textit{pc-probe}}
+	\caption{Script correlati al device \textit{pc-probe}}
 	\label{script}
 \end{table}
 Prendendo ad esempio lo script \textit{ram-available-to-mb}, il codice in oggetto permette di ricavare la quantità, espressa in gigabyte, di memoria disponibile tramite l’operazione \textit{available-ram()}, la quale viene poi concatenata a \textit{map(a*1024)} che converte il valore ottenuto in megabyte moltiplicandolo per 1024. Infine, tramite la \textit{send()} il campione appena elaborato viene inviato a Measurify.\\
@@ -62,11 +62,11 @@ Un esempio di dato elaborato dallo script \textit{ram-available-to-mb} del devic
 	\caption{Dato relativo al valore di memoria RAM disponibile convertito in MB e conservato sul Cloud}
 	\label{datowin}
 \end{figure}
-\section{Applicazione Unity}
+\section{Applicazione alla Realtà Virtuale}
 Edge Engine nasce con l’idea di offrire uno strumento modulare e slegato dall'hardware che possa facilitare e incentivare lo sviluppo di applicazioni IoT. Questo motore, oltre ad essere una valida soluzione per tale scopo, potrebbe inoltre risultare ugualmente efficace in un contesto totalmente differente, come quello dei videogiochi. Ciò è dovuto al fatto che, attualmente, non esiste uno strumento che elabori al tempo stesso dati provenienti da sorgenti così eterogenee come possono essere un sensore fisico ed uno presente all'interno di un mondo virtuale. Si pensi ad esempio ad un videogiocatore che abbia intenzione di monitorare il proprio battito cardiaco e, al contempo, processare dati provenienti dall’ambiente di gioco. Edge Engine, se adattato ad un Integrated Development Environment (IDE) dedito alla creazione di videogiochi, potrebbe essere in grado di svolgere entrambi i task richiesti grazie all’alto livello di scalabilità di cui dispone.\\
 Come ultimo obiettivo, dunque, si intende trattare lo sviluppo di un’applicazione per Unity3D in modo da poter osservare il funzionamento di Edge Engine in un contesto, la realtà virtuale, diverso da quello per cui era stato inizialmente pensato, ma che può spesso rivelarsi strettamente collegato, o collegabile, all'ambiente reale.\\
 In primo luogo verranno descritti i passi richiesti per la creazione di un plugin, necessario al fine di utilizzare Edge Engine all'interno dell'ambiente Unity3D. In seconda istanza poi, sarà discussa l'implementazione di un'applicazione di esempio che sfrutti il plugin in precedenza sviluppato.
-\subsection{Plugin}
+\subsection{Plugin}\label{plugin}
 All'interno di Unity, normalmente si utilizzano gli script C\# per creare funzionalità, ma è anche possibile includere codice creato al di fuori di Unity sotto forma di plugin. I plugin sono librerie di codice nativo specifiche della piattaforma. Possono accedere a funzionalità come chiamate del sistema operativo e librerie di codici di terze parti che altrimenti non sarebbero disponibili per Unity. Tuttavia, queste librerie non sono accessibili agli strumenti di Unity come le normali librerie utilizzabili all'interno dell’IDE. \\
 Per la creazione del plugin, che corrisponde in tutto e per tutto ad una dynamic-link library (DLL), si è scelto di utilizzare Visual Studio, data l'affinità di tale IDE con Unity.\\
 Dal momento che il compilatore offerto da Visual Studio, MSVC, è differente da g++, usato in precedenza per la creazione della libreria Edge Engine e l’installazione delle librerie POCO, è stato in primo luogo necessario ricompilare entrambi i progetti.\\
@@ -88,5 +88,63 @@ void Action(char* sampleName, float hits)
 La \textit{Setup} prende in ingresso nell'ordine \textit{username}, \textit{password}, \textit{thing}, \textit{device}  e \textit{deviceId}, un identificativo univoco per ogni dispositivo.\\
 La \textit{Action}, invece, riceve il nome della \textit{feature} e il relativo dato misurato per poterlo processare e inviare successivamente al Cloud.\\
 Il progetto così compilato produce i file \textit{NATIVECPPLIBRARY.dll}, \textit{pcred.dll}, \textit{PocoFoundationd.dll}, \textit{PocoNetd.dll}, \textit{zlibd1.dll}. Il primo rappresenta proprio la libreria dinamica contenente le funzioni appena create che verranno poi utilizzate all'interno di uno script Unity. Il secondo, invece, è una DLL di file si sistema essenziali dell'OS Windows. Infine, gli ultimi tre sono un’elaborazione, operata durante la creazione della DLL, delle librerie POCO, necessarie al funzionamento di  \textit{NATIVECPPLIBRARY.dll}. Al fine di utilizzare all'interno di Unity la DLL appena creata, è necessario copiare questi files dentro la cartella di progetto.
+\subsection{Unity}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1.1]{pics/ring}
+	\caption{Scena di gioco Unity3D}
+	\label{ring}
+\end{figure}
+Sul fronte Unity, avendo come obbiettivo primario il test delle funzionalità di Edge Engine anche in un contesto di realtà virtuale, si è deciso di creare una semplice applicazione di esempio che potesse essere in grado di raccogliere dati provenienti dalla scena di gioco e, tramite il plugin descritto precedentemente, di inviarli a Measurify. In particolare, è stato creato un ring contenente al suo interno una pallina controllabile tramite i tasti freccia del PC (si veda fig. \ref{ring}). Ogniqualvolta la pallina urta uno dei quattro muri delimitanti, la collisione viene registrata all'interno di una variabile incrementale e, in caso di raggiungimento di un numero di collisioni che sia multiplo di cinque (lo zero è escluso per ovvi motivi), tale valore viene inviato al Cloud. Come si può facilmente dedurre, tale applicazione, differentemente da quella per Windows, rappresenta un mero esempio di utilizzo di Edge Engine all'interno dell'ambiente di gioco e non intende in alcun modo mostrare un vero e proprio caso applicativo, dal momento che non è questo lo scopo del progetto Unity.\\
+In primo luogo è stato necessario inserire la descrizione della risorsa all'interno di Measurify, riassunta in tabella \ref{descunitydev}.
+\begin{table}[H]
+	\begin{tabular}{|p{0.15\textwidth}|p{0.30\textwidth}|p{0.46\textwidth}|}
+		\hline
+		\textbf{Parametri} & \textbf{Nome} & \textbf{URL}\\
+		\hline
+		\textbf{Thing} & ball & {{url}}/v1/things/ball\\
+		\hline
+		\textbf{Feature} & collision & {{url}}/v1/features/collision\\
+		\hline
+		\textbf{Device} & unityDevice & {{url}}/v1/devices/unityDevice\\	
+		\hline
+		\textbf{Script} & collisions-count-send & {{url}}/v1/scripts/collisions-count-send\\	
+		\hline
+	\end{tabular}
+	\\\\url = \url{http://students.atmosphere.tools/}
+	\caption{Parametri Measurify della risorsa Unity}
+	\label{descunitydev}
+\end{table}
+Come spiegato in precedenza, siccome quest'applicazione è pensata per essere un semplice esempio guida, il valore associato alla sola feature \textit{collision} viene inviato così com'è, senza alcuna elaborazione intermedia.\\
+Veniamo dunque allo sviluppo dello script C\# che permette la fruizione della libreria Edge Engine anche all'interno di Unity.  
+
+\begin{wrapfigure}{r}{7.5cm}
+	\centering
+	\includegraphics[scale=0.85]{pics/unityscriptvars}
+	\caption{Variabili settabili dall'utente}
+	\label{unityscriptvars}
+\end{wrapfigure}
+Ricordando la struttura delle funzioni esportate dal plugin mostrata nella sezione \ref{plugin}, le quali prevedono di ricevere in ingresso i nomi dei parametri descrittivi della risorsa, oltre alle credenziali di accesso, al fine di mantenere un elevato livello di configurabilità si è scelto di impostare queste variabili come settabili da parte dell'utente dichiarandole \textit{public}, come visibile in figura \ref{unityscriptvars}. Così facendo lo sviluppatore sarà poi in grado di personalizzare a proprio piacimento i dettagli relativi al proprio caso applicativo.\\
+Successivamente, per poter far uso all'interno di Unity delle funzioni \textit{Setup} e \textit{Action}, esposte dal plugin, è necessario dichiararle con l’attributo \textit{DLLImport}, come mostrato di seguito:
+\begin{verbatim}
+[DllImport("NATIVECPPLIBRARY", EntryPoint = "Setup")]
+public static extern void Setup(StringBuilder myId, 
+            StringBuilder myPw, StringBuilder myThing, 
+            StringBuilder myDevice, StringBuilder myDeviceId);
+
+[DllImport("NATIVECPPLIBRARY", EntryPoint = "Action")]
+public static extern void Action(StringBuilder mySample, 
+            float data);
+
+\end{verbatim}
+
+\begin{itemize}
+	\item \textit{DLLImport} indica l'importazione da una DLL;
+	\item \textit{EntryPoint} fornisce al compilatore il nome che la funzione ha all'interno del plugin;
+	\item l'attributo \textit{extern} è necessario per dichiarare una funzione che è implementata esternamente.
+\end{itemize}
+Come è possibile notare, il passaggio dei parametri testuali avviene per lo più attraverso dati di tipo \textit{StringBuilder}. Ciò è dovuto al fatto che l’utilizzo della memoria di StringBuilder e array di \textit{char} è simile, pertanto il plugin è in grado di interpretare correttamente il contenuto del primo definito dal lato Unity. 
+
+
 
 
