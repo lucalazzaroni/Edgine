@@ -179,6 +179,28 @@ public static extern void Action(StringBuilder mySample,
 
 Come è possibile notare, il passaggio dei parametri testuali avviene per lo più attraverso dati di tipo \textit{StringBuilder}. Ciò è dovuto al fatto che l’utilizzo della memoria di \textit{StringBuilder} e array di \textit{char} è simile, pertanto il plugin è in grado di interpretare correttamente il contenuto del primo definito dal lato Unity. 
 
+Come di consueto, lo script Unity è organizzato nel seguente modo: un metodo \textit{Start}, che viene eseguito una sola volta all’avvio del programma, e uno, \textit{Update}, che viene invece ripetuto ciclicamente. Dal momento che, anche in questo caso, lo schema di base è simile a quello degli sketch Arduino, va da sé che la funzione \textit{Setup} verrà chiamata all'interno di \textit{Start}, mentre la \textit{Action} dentro \textit{Update}, come visibile in figura \ref{startupdate}. 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{pics/startupdate}
+	\caption{Metodi \textit{Start} e \textit{Update} dello script Unity}
+	\label{startupdate}
+\end{figure}
 
+\textit{Start} ha il compito di inizializzare tutte le variabili pubbliche di tipo \textit{StringBuilder} coinvolte nello script. Una volta recuperati i parametri inseriti dall'utente, viene eseguita la \textit{Setup} che, si rammenta, permette di autenticarsi su Measurify ottenendo il JWT per gli accessi successivi. In ultimo, viene inizializzato un oggetto di tipo \textit{Queue\textless Thread \textgreater} che si occuperà di gestire le future chiamate della funzione \textit{Action}. La creazione di oggetti di tipo \textit{Thread} è necessaria in quanto, altrimenti, la normale esecuzione del programma verrebbe interrotta per qualche istante ad ogni invio dei dati al Cloud, a causa del tempo necessario a compiere questo task. Grazie all'utilizzo dei thread, l'applicazione potrà continuare il suo normale svolgimento mentre, in parallelo, la funzione \textit{Action} viene portata a termine. I thread vengono inseriti all'interno di una coda al fine di ottenere una più semplice gestione degli stessi, avendo la possibilità di crearli, eseguirli e distruggerli in modo ordinato facendo uso dei metodi \textit{Enqueue}, \textit{Peek} e \textit{Dequeue}.
+
+\textit{Update}, innanzitutto, esegue un controllo relativo al numero di collisioni che la pallina ha effettuato. Tale valore deve essere multiplo di cinque, diverso da zero e differente dal dato precedentemente inviato al Cloud in modo da non avere duplicati. Se queste tre condizioni sono soddisfatte, viene creato un nuovo thread e aggiunto alla coda. Qualora il programma non ne stia già eseguendo uno precedentemente creato, il thread viene eseguito. Tutti quelli rimasti nella coda alla chiusura dell'applicazione saranno lanciati, prima dell'effettivo termine del programma, dal metodo \textit{OnApplicationQuit}. In questo modo l'applicazione, a regime, non è sovraccarica di un eccessivo numero di thread e, al contempo, viene garantita l'esecuzione di ciascuno di essi entro la conclusione del programma, momento in cui l'utente non interagisce più con la scena di gioco.
+
+Dall'immagine mostrata in figura \ref{risorsaunity} si può notare come, grazie alla creazione del plugin e all'implementazione di uno script che sfrutta tale DLL, Edge Engine sia ora in grado di comunicare correttamente con Measurify anche quando utilizzato in un contesto di realtà virtuale.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{pics/measunity}
+	\caption{Dato relativo al numero di collisioni effettuate dalla pallina conservato sul Cloud}
+	\label{risorsaunity}
+\end{figure}
+
+\section{Applicazione reale}
+caio
 

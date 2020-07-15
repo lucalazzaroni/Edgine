@@ -16,8 +16,9 @@
 \usepackage{wrapfig}
 \usepackage{tabularx}
 \addto\captionsitalian{\renewcommand{\bibname}{Riferimenti bibliografici e sitografici}}
-\onehalfspacing
+%\onehalfspacing
 %\doublespacing
+\linespread{1.5}
 \fancypagestyle{plain}{
 %	\renewcommand{\headrulewidth}{0pt}
 	\fancyhead[L]{}
@@ -90,11 +91,15 @@
 \renewcommand{\headrulewidth}{0.5pt}
 \include{Abstract}
 \begingroup
+%\begin{spacing}{1.25}
 \fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
 \tableofcontents
 \listoffigures
 \listoftables
 \cleardoublepage
+%\end{spacing}
 \endgroup
 \mainmatter
 \include{Introduzione}
@@ -108,14 +113,14 @@
 \pagestyle{plain}
 \fancyfoot[R]{}
 \begin{thebibliography}{26}
+	\begin{spacing}{1.25}
 %\pagestyle{empty}
-
 	\bibitem{iotedge}
-	IoTedge: \textit{L'edge computing può fare la differenza nell’analisi dei dati},
+	IoTedge: \textbf{\textit{L'edge computing può fare la differenza nell’analisi dei dati}},
 	\\\url{https://www.iotedge.it/edge-platform/ledge-computing-puo-fare-la-differenza-nellanalisi-dei-dati/}
 	
 	\bibitem{iotgoogle}
-	Injong Rhee: \textit{Bringing intelligence to the edge with Cloud IoT},
+	Injong Rhee: \textbf{\textit{Bringing intelligence to the edge with Cloud IoT}},
 	\\\url{https://cloud.google.com/blog/products/gcp/bringing-intelligence-edge-cloud-iot}
 		
 	\bibitem{tflowlite}
@@ -162,18 +167,18 @@
 	\\\url{https://www.redhat.com/it/technologies/cloud-computing/openshift}
 	
 	\bibitem{VN}
-	Yaping Cui, Yingjie Liang, Ruyan Wang: \textit{Resource Allocation Algorithm With Multi-Platform Intelligent Offloading in D2D-Enabled Vehicular Networks}, in IEEE Access (Volume: 7), pag. 21246 - 21253, 14 Febbraio 2019,
+	Yaping Cui, Yingjie Liang, Ruyan Wang: \textbf{\textit{Resource Allocation Algorithm With Multi-Platform Intelligent Offloading in D2D-Enabled Vehicular Networks}}, in IEEE Access (Volume: 7), pag. 21246 - 21253, 14 Febbraio 2019,
 	\\\url{https://ieeexplore.ieee.org/abstract/document/8642506}
 	
 	\bibitem{energyIoT}
-	Olli Väänänen, Timo Hämäläinen:\textit{Requirements for Energy Efficient Edge Computing: A Survey}, in Internet of Things, Smart Spaces, and Next Generation Networks and Systems, vol. 11118,  29 Settembre 2018,
+	Olli Väänänen, Timo Hämäläinen: \textbf{\textit{Requirements for Energy Efficient Edge Computing: A Survey}}, in Internet of Things, Smart Spaces, and Next Generation Networks and Systems, vol. 11118,  29 Settembre 2018,
 	\\\url{https://link.springer.com/chapter/10.1007/978-3-030-01168-0_1}
 	
 	\bibitem{tuple}
-	G. Ciatto, S. Mariani, A. Omicini, F. Zambonelli, M. Louvel: \textit{Twenty years of coordination technologies: State-of-the-art and perspectives}, in Coordination Models and Languages, Springer, vol. 10852, pag. 51-80, 2018
+	G. Ciatto, S. Mariani, A. Omicini, F. Zambonelli, M. Louvel: \textbf{\textit{Twenty years of coordination technologies: State-of-the-art and perspectives}}, in Coordination Models and Languages, Springer, vol. 10852, pag. 51-80, 2018
 	
 	\bibitem{tusow}
-	G. Ciatto, L. Rizzato, A. Omicini, S. Mariani, \textit{TuSoW: Tuple Spaces for Edge Computing}, 2019 28th International Conference on Computer Communication and Networks (ICCCN), Valencia, Spagna, 2019, pag. 1-6, doi: 10.1109/ICCCN.2019.8846916,
+	G. Ciatto, L. Rizzato, A. Omicini, S. Mariani: \textbf{\textit{TuSoW: Tuple Spaces for Edge Computing}}, 2019 28th International Conference on Computer Communication and Networks (ICCCN), Valencia, Spagna, 2019, pag. 1-6, doi: 10.1109/ICCCN.2019.8846916,
 	\\\url{https://ieeexplore.ieee.org/abstract/document/8846916}
 	
 	\bibitem{mlrasp}
@@ -183,7 +188,7 @@
 	Ghosh A.M., Grolinger K.: \textbf{\textit{Deep Learning: Edge-Cloud Data Analytics for IoT. IEEE Canadian Conference of Electrical and Computer Engineering (CCECE)}}, Edmonton, AB, Canada, 5–8 Maggio 2019
 	
 	\bibitem{respiro}
-	Brian Fuller, \textbf{\textit{AI Technology Helping Asthma Sufferers Breathe Easier}},
+	Brian Fuller: \textbf{\textit{AI Technology Helping Asthma Sufferers Breathe Easier}},
 	\\\url{http://www.hackster.io/news/ai-technology-helping-asthma-sufferers-breathe-easier-50775aa7b89f}
 	
 	\bibitem{POCO}
@@ -210,6 +215,7 @@
 	Pacman,
 	\\\url{https://wiki.archlinux.org/index.php/pacman}
 %	\pagestyle{plain}
+	\end{spacing}
 \end{thebibliography}
 
 \end{document}

@@ -4,7 +4,7 @@ In un contesto di Edge Computing, un ecosistema IoT necessita di tre componenti 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.13]{pics/edgecomputingstruct}
+	\includegraphics[width=0.8\linewidth]{pics/edgestructure}
 	\caption{Ecosistema IoT basato sull'Edge Computing}
 	\label{ecosistema}
 \end{figure}
@@ -52,23 +52,23 @@ In figura \ref{edgecloud} è possibile vedere una struttura schematica dell'arch
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth, height= 0.35 \textheight]{pics/edgearch}
+	\includegraphics[width=\linewidth]{pics/edgearch}
 	\caption{Architettura Edge Engine - Measurify}
 	\label{edgecloud}
 \end{figure}
 
 \section{Evoluzione del progetto}
-A partire dal progetto Edge Engine per Arduino, l’intento è quello di realizzare un prodotto multipiattaforma per dispositivi di tipo PC (Windows/Linux/MacOS).
+A partire dal progetto Edge Engine per Arduino, l’intento è quello di realizzare un prodotto multipiattaforma per dispositivi di tipo PC (Windows/ Linux/ MacOS).
 
-La prima versione di Edge Engine nasce per essere utilizzata esclusivamente su dispositivi Arduino, pertanto, nonostante la maggior parte delle classi sia indipendente dalla piattaforma, ne restano due, \textit{APIRest} e \textit{Connection}, specifiche per Arduino. La prima si occupa di gestire le richieste HTTP da e verso il Cloud, mentre la seconda di gestire il modulo WiFi. Entrambe, dal momento che i task che eseguono necessitano di librerie esterne specifiche, sono giocoforza legate alla piattaforma sulla quale vengono eseguite (si veda fig. \ref{arduinodep}). Pertanto, il primo passo per rendere il codice multipiattaforma sarà creare ulteriori classi wrapper \textit{APIRest\_windows} e \textit{Connection\_windows}, affinché si generalizzi sempre di più questo aspetto dell'Edge Engine.
+La prima versione di Edge Engine nasce per essere utilizzata esclusivamente su dispositivi Arduino, pertanto, nonostante la maggior parte delle classi sia indipendente dalla piattaforma, ne restano due, \texttt{APIRest} e \texttt{Connection}, specifiche per Arduino. La prima si occupa di gestire le richieste HTTP da e verso il Cloud, mentre la seconda di gestire il modulo WiFi. Entrambe, dal momento che i task che eseguono necessitano di librerie esterne specifiche, sono giocoforza legate alla piattaforma sulla quale vengono eseguite (si veda fig. \ref{arduinodep}). Pertanto, il primo passo per rendere il codice multipiattaforma sarà creare ulteriori classi wrapper \texttt{APIRest\_windows} e \texttt{Connection\_windows}, affinché si generalizzi sempre di più questo aspetto dell'Edge Engine.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics{pics/arduinodependent}
-	\caption{Esempio di codice dipendente dalla piattaforma nella classe \textit{Connection}}
+	\caption{Esempio di codice dipendente dalla piattaforma nella classe \texttt{Connection}}
 	\label{arduinodep}
 \end{figure}
 
-Inoltre, tutte le funzioni specifiche di Arduino utilizzate nel progetto dovranno essere sostituite da funzioni equivalenti per permettere un utilizzo su dispositivi di tipo PC (ad esempio la funzione \textit{Serial.print} dovrà essere sostituita da \textit{cout}).
+Inoltre, tutte le funzioni specifiche di Arduino utilizzate nel progetto dovranno essere sostituite da funzioni equivalenti per permettere un utilizzo su dispositivi di tipo PC (ad esempio la funzione \texttt{Serial.print} dovrà essere sostituita da \texttt{cout}).
 
 Nel prossimo capitolo verrà discusso il porting di Edge Engine per dispositivi PC, mantenendo però anche la possibilità di esecuzione su piattaforme Arduino.
