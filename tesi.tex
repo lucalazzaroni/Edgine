@@ -70,7 +70,9 @@
 \newpage\null\thispagestyle{empty}\newpage
 
 \frontmatter
-\thispagestyle{empty}
+%\thispagestyle{empty}
+\clearpage
+\renewcommand{\headrulewidth}{0pt}
 \null\vspace{\stretch {1}}
 \begin{center}
 	\section*{\centering Ringraziamenti}
@@ -78,13 +80,14 @@
 \end{center}
 \vspace{\stretch {2}}\null
 \newpage
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \begin{flushright}
 	\null\vspace{\stretch {1}}
 	Dedica 
 	\vspace{\stretch {2}}\null
 \end{flushright}
-
+\cleardoublepage
+\renewcommand{\headrulewidth}{0.5pt}
 \include{Abstract}
 \begingroup
 \fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
@@ -104,10 +107,8 @@
 \clearpage
 \pagestyle{plain}
 \fancyfoot[R]{}
-\begin{thebibliography}{9}
+\begin{thebibliography}{26}
 %\pagestyle{empty}
-
-
 
 	\bibitem{iotedge}
 	IoTedge: \textit{L'edge computing può fare la differenza nell’analisi dei dati},
@@ -208,7 +209,6 @@
 	\bibitem{Pacman}
 	Pacman,
 	\\\url{https://wiki.archlinux.org/index.php/pacman}
-
 %	\pagestyle{plain}
 \end{thebibliography}
 
