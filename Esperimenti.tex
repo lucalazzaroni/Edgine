@@ -220,6 +220,15 @@ Guru Meditation Error:
 
 Ciò è dovuto all'intervento della Floating-Point Unit (FPU), non supportata all'interno della ISR. Pertanto, la soluzione adottata è stata la sostituzione del tipo \texttt{float} con \texttt{long} che, non essendo a virgola mobile, non presenta questa problematica.
 
+Una volta risolto questo bug nel codice, è possibile comunicare correttamente con Measurify, come testimoniato dalla figura \ref{measacquario}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{pics/measacquario}
+	\caption{Dato relativo al rilevamento di presenza effettuate dal sensore PIR}
+	\label{measacquario}
+\end{figure}
+
 Come previsto, i benefici riscontrati dall'utilizzo di Edge Engine, a detta dei diretti interessati,  sono stati molteplici. In primo luogo, la facilità d'uso e installazione del sistema ha permesso di concentrarsi maggiormente sul recupero dei dati piuttosto che sugli aspetti della comunicazione Cloud, migliorando così la qualità finale del progetto, riducendo al contempo tempi e quantità di lavoro richiesti. Inoltre, gli esempi di utilizzo forniti hanno permesso di comprendere facilmente come sfruttare il motore perimetrale, fungendo da solida base per lo sviluppo del progetto in questione. Infine, la presenza di script personalizzabili con operazioni concatenabili, nonostante il numero limitato di questi, ha permesso di raggiungere gli obiettivi prefissati in modo logico e preciso.
 
 I principali problemi riscontrati, invece, sono stati la necessità di inserire le credenziali SSID tramite codice e una certa difficoltà di comprensione dell'interazione con il Cloud. In particolare, poiché le richieste HTTP effettuate da Edge Engine sono nascoste all'interno della libreria, non vi è alcun feedback immediato per l'utente in merito alla memorizzazione dei dati su Measurify.
