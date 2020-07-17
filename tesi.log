@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  17 JUL 2020 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  17 JUL 2020 16:45
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1374,7 +1374,7 @@ Here is how much of TeX's memory you used:
  27792 multiletter control sequences out of 15000+200000
  540679 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,48p,1693b,923s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,18n,48p,1684b,923s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\luca\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:
@@ -1385,7 +1385,7 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
 e1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb>
-Output written on tesi.pdf (67 pages, 1476568 bytes).
+Output written on tesi.pdf (67 pages, 1476382 bytes).
 PDF statistics:
  679 PDF objects out of 1000 (max. 8388607)
  142 named destinations out of 1000 (max. 500000)

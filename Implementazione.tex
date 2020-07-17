@@ -2,16 +2,16 @@
 \chapter{Implementazione}
 In questa sezione verrà illustrato il porting di Edge Engine da Arduino ESP32 a dispositivi di tipo PC. Al fine di mantenere il prodotto finale slegato dalla piattaforma, si è scelto di utilizzare il compilatore \textbf{g++}, disponibile su dispositivi Windows, Linux e MacOS.
 
-In primo luogo verrà discussa l’installazione delle librerie POCO, necessarie per usufruire delle HTTP requests, per poi passare alla modifica del codice preesistente affinché possa essere eseguito sul target desiderato mantenendo però la compatibilità con dispositivi Arduino. In ultimo, verranno mostrati un possibile esempio di utilizzo e la creazione di una libreria vera e propria al fine di permettere una diffusione su più larga scala unita ad una facilità d'uso maggiore.
+In primo luogo verrà discussa l’installazione delle librerie POCO, necessarie per usufruire delle HTTP requests, per poi passare alla modifica del codice preesistente affinché possa essere eseguito sul target desiderato, mantenendo però la compatibilità con dispositivi Arduino. In ultimo, verranno mostrati un possibile esempio di utilizzo e la creazione di una libreria vera e propria, al fine di permettere una diffusione su più larga scala unita ad una facilità d'uso maggiore.
 \section{Librerie POCO}
-Come anticipato in precedenza, la prima versione di Edge Engine, in quanto prevista per Arduino, era dotata di due classi wrapper, \texttt{Connection} e \texttt{APIRest}, adibite alla gestione di risorse hardware e, pertanto, legate alla piattaforma in uso. Di conseguenza, si è resa necessaria la creazione di altre due classi che permettessero di svolgere le stesse funzioni su dispositivi PC. Dal momento che le due classi necessitano di effettuare HTTP requests o di accedere alla rete Internet e l’obbiettivo del progetto è quello di mantenere il più possibile il codice indipendente dalla piattaforma, si è scelto di fare affidamento sulle librerie POCO \cite{POCO}.
+Come anticipato in precedenza, la prima versione di Edge Engine, in quanto prevista per Arduino, è dotata di due classi wrapper, \texttt{Connection} e \texttt{APIRest}, adibite alla gestione di risorse hardware e, pertanto, legate alla piattaforma in uso. Di conseguenza, si è resa necessaria la creazione di altre due classi che permettessero di svolgere le stesse funzioni su dispositivi PC. Dal momento che le due classi necessitano di effettuare HTTP requests o di accedere alla rete Internet e l’obbiettivo del progetto è quello di mantenere il più possibile il codice indipendente dalla piattaforma, si è scelto di fare affidamento sulle librerie POCO \cite{POCO}.
 \subsection{Installazione}
 Le librerie POCO sono un potente strumento C++ multipiattaforma per la creazione di applicazioni basate su rete e Internet che funzionano su desktop, server, dispositivi mobili, IoT e sistemi integrati.
 
-L’installazione di queste librerie, tuttavia, si è rivelata più complicata del previsto dal momento che la documentazione riguardante la compilazione delle stesse utilizzando g++ è quasi del tutto assente.
+L’installazione di queste librerie, tuttavia, si è rivelata più complicata del previsto, dal momento che la documentazione riguardante la compilazione delle stesse facendo uso di g++ è quasi del tutto assente.
 
 \subsubsection{VCPKG, CMake, Conan}
-In primo luogo, come da istruzioni del sito POCO, si è tentata l’installazione attraverso il package manager di Windows VCPKG \cite{VCPKG}: un gestore di pacchetti open source multipiattaforma di Microsoft. Nonostante su VCPKG fosse presente il supporto alla compilazione di tali librerie tramite g++, il processo si interrompeva intorno al 70\% a causa del seguente errore:
+In primo luogo, come da istruzioni del sito POCO, si è tentata l’installazione attraverso il package manager VCPKG \cite{VCPKG}: un gestore di pacchetti open source multipiattaforma di Microsoft. Nonostante VCPKG riportasse il supporto alla compilazione di tali librerie tramite g++, il processo si interrompeva intorno al 70\% a causa del seguente errore:
 
 \begin{verbatim}
 In file included 
@@ -37,7 +37,7 @@ Net/CMakeFiles/Net.dir/all] Error 2
 mingw32-make.exe: *** [Makefile:151: all] Error 2
 \end{verbatim}
 
-Il secondo tentativo è stato invece effettuato utilizzando CMake \cite{CMake}. CMake è un tool modulare che, con poche e concise istruzioni, è in grado di generare Makefile. CMake dispone di una particolare sintassi comprensiva di moltissime macro ed il loro utilizzo è possibile mediante un apposito file chiamato  \textbf{CMakeLists.txt}. Per la generazione del Makefile e la successiva compilazione del progetto, è necessario eseguire i seguenti comandi:
+Il secondo tentativo è stato invece effettuato utilizzando CMake \cite{CMake}. CMake è un tool modulare che, con poche e concise istruzioni, è in grado di generare Makefile. Esso dispone di una particolare sintassi comprensiva di moltissime macro il cui utilizzo è possibile mediante un apposito file chiamato  \textbf{CMakeLists.txt}. Per la generazione del Makefile e la successiva compilazione del progetto, è necessario eseguire i seguenti comandi:
 
 \begin{verbatim}
 mkdir build
@@ -48,11 +48,11 @@ make
 
 Anche in questo caso però, la compilazione si interrompeva attorno al 70\% restituendo lo stesso errore di VCPKG.
 
-A seguito dei primi due tentativi falliti, si è scelto di provare a installare le librerie POCO tramite Conan: un package manager open source per C e C++ che consente ai team di sviluppo di gestire in modo semplice ed efficiente i loro pacchetti e dipendenze tra piattaforme e sistemi di compilazione \cite{Conan}. Il funzionamento di Conan è analogo a quello di VCPKG, ma i file necessari all'installazione delle librerie sono differenti, pertanto ci si sarebbe potuto aspettare un esito differente da quelli passati. Tuttavia, dopo aver seguito le istruzioni specificate dalla guida all'utilizzo, il risultato ottenuto è stato analogo ai precedenti.
+A seguito dei primi due tentativi falliti, si è scelto di provare a installare le librerie POCO tramite Conan: un package manager open source per C e C++ che consente ai team di sviluppo di gestire in modo semplice ed efficiente pacchetti e dipendenze tra piattaforme e sistemi di compilazione \cite{Conan}. Il funzionamento di Conan è analogo a quello di VCPKG, ma i file necessari all'installazione delle librerie sono differenti, pertanto ci si sarebbe potuto aspettare un esito differente da quelli passati. Tuttavia, dopo aver seguito le istruzioni specificate dalla guida all'utilizzo, il risultato ottenuto è stato analogo ai precedenti.
 \subsubsection{MSYS2}
-In ultimo, nonostante non ci fosse alcuna documentazione a riguardo nemmeno sul sito delle librerie POCO, la mancanza di valide alternative ha portato a sperimentare una via differente, rappresentata dal tool MSYS2 \cite{MSYS2}. MSYS2 è una raccolta di strumenti e librerie che fornisce un ambiente di facile utilizzo per la creazione, l'installazione e l'esecuzione di software nativo Windows. Offre build aggiornate per GCC, mingw-w64, CPython, CMake, Meson, OpenSSL, ecc. Per fornire una facile installazione dei pacchetti e un modo per mantenerli aggiornati, è dotato di un package manager chiamato Pacman \cite{Pacman}. Offre molte potenti funzionalità come la risoluzione delle dipendenze e semplici aggiornamenti di sistema, nonché la creazione di pacchetti. La distribuzione del software MSYS2 utilizza un porting di Pacman per creare e gestire (installare, rimuovere e aggiornare) i pacchetti binari.
+In ultimo, nonostante non ci fosse alcuna documentazione a riguardo nemmeno sul sito delle librerie POCO, la mancanza di valide alternative ha portato a sperimentare una via differente, rappresentata dal tool MSYS2 \cite{MSYS2}. MSYS2 è una raccolta di strumenti e librerie che fornisce un ambiente di facile utilizzo per la creazione, l'installazione e l'esecuzione di software nativo Windows. Essa offre build aggiornate per GCC, mingw-w64, CPython, CMake, Meson, OpenSSL, ecc. Per fornire una facile installazione dei pacchetti e un modo per mantenerli aggiornati, è dotata di un package manager chiamato Pacman \cite{Pacman}, il quale offre molte potenti funzionalità tra cui la risoluzione delle dipendenze e semplici aggiornamenti di sistema, nonché la creazione di pacchetti. La distribuzione del software MSYS2 utilizza un porting di Pacman per creare e gestire (installare, rimuovere e aggiornare) i pacchetti binari.
 
-Per poter installare le librerie POCO tramite MSYS2 è necessario eseguire la seguente istruzione sul prompt dei comandi proprietario:
+Al fine di installare le librerie POCO tramite MSYS2 è necessario eseguire la seguente istruzione sul prompt dei comandi fornito in dotazione:
 
 \begin{verbatim}
 $ pacman -S mingw64/mingw-w64-x86_64-poco
@@ -65,10 +65,10 @@ $ pacman -Qi mingw-w64-x86_64-poco
 $ pactree mingw-w64-x86_64-poco
 \end{verbatim}
 
-Una possibile spiegazione per la quale in questo caso l’installazione sia andata a buon fine potrebbe essere innanzi tutto la differente origine del codice sorgente rispetto ai tool precedentemente utilizzati. Inoltre, come è stato possibile verificare direttamente sulla repository di MSYS2, il package POCO risulta aggiornato pochi giorni prima del tentativo di installazione. Ciò potrebbe indicare una possibile recente risoluzione dei problemi relativi al pacchetto che, probabilmente, non era ancora stata portata a termine nel caso degli altri package manager.
+Una possibile spiegazione per la quale in questo caso l’installazione sia andata a buon fine potrebbe essere innanzi tutto la differente origine del codice sorgente rispetto ai tool precedentemente utilizzati. Inoltre, come è stato possibile verificare direttamente sulla repository di MSYS2, il pacchetto POCO risulta aggiornato pochi giorni prima del tentativo di installazione. Ciò potrebbe indicare una possibile recente risoluzione dei problemi relativi al pacchetto che, probabilmente, non era ancora stata portata a termine nel caso degli altri package manager.
 
 \section{Utilizzo}\label{utilizzo}
-Per poter usufruire delle librerie POCO precedentemente installate su dispositivi di tipo PC, è necessario seguire alcuni passaggi specifici riguardo le istruzioni da dare al compilatore:
+Onde usufruire delle librerie POCO precedentemente installate su dispositivi di tipo PC, è necessario seguire alcuni passaggi specifici riguardo le istruzioni da dare al compilatore:
 
 \begin{verbatim}
 path\to\mingw64\bin\g++.exe 
@@ -100,9 +100,9 @@ path\to\EdgeEngine_library\examples\CC\EdgeEdgine\EdgineTest.exe
 -lPocoFoundation -lPocoUtil -lPocoNet
 \end{verbatim}
 
-Come è possibile notare, in assenza di un file \texttt{.lib}, è necessario compilare tutte le classi del progetto affinché il proprio main possa funzionare senza errori. Il file di output generato avrà estensione \texttt{.exe} e sarà eseguibile da linea di comando.
+Come è possibile notare, in assenza di un file \texttt{.lib}, è necessario compilare tutte le classi del progetto affinché il proprio main possa funzionare senza errori. Il file di output generato ha estensione \texttt{.exe} ed è eseguibile da linea di comando.
 
-Le ultime cinque righe riguardano invece l'inclusione all'interno del progetto delle librerie POCO. Il comando \texttt{-I} è necessario per fornire al compilatore la locazione degli header POCO. \texttt{-L}  permette invece di inserire i percorsi aggiuntivi necessari al linker per trovare i file relativi alle librerie. In ultimo, si utilizza il comando \texttt{-l} per assegnare al compilatore i nomi delle librerie che sarà necessario linkare.  
+Le ultime cinque righe riguardano invece l'inclusione all'interno del progetto delle librerie POCO. Il comando \texttt{-I} è necessario per fornire al compilatore la locazione degli header POCO. \texttt{-L}  permette invece di inserire i percorsi aggiuntivi necessari al linker per trovare i file relativi alle librerie. In ultimo, si utilizza il comando \texttt{-l} per assegnare al compilatore i nomi delle librerie che è necessario linkare.  
 \section{Classi wrapper}
 Come spiegato in precedenza, la prima versione di Edge Engine è dotata di due classi wrapper che svolgono compiti di connessione alla rete e invio di richieste HTTP, ossia \texttt{Connection} e \texttt{APIRest}. In questa sezione verrà discusso l’adattamento che si è reso necessario applicare affinché queste due classi potessero essere utilizzate da piattaforme di tipo PC.
 
@@ -136,7 +136,7 @@ Dal momento che \texttt{APIRest} fa largo uso della libreria HTTPClient di Ardui
 \end{figure}
 \newpage
 
-In primo luogo, il metodo prende in ingresso tre stringhe: url del server, username e password dell'utente necessari ad ottenere i permessi per accedere alle proprie risorse. In seguito viene eseguita una POST all'interno del cui body vengono specificati username e password, scritti in formato JSON. La response conterrà lo stato della richiesta HTTP, che indica se l'operazione sia andata a buon fine o meno, e il JWT necessario per gli accessi futuri alle risorse.
+In primo luogo, il metodo prende in ingresso tre stringhe: url del server, username e password dell'utente necessari ad ottenere i permessi per accedere alle proprie risorse. In seguito viene eseguita una POST all'interno del cui body vengono specificati username e password, scritti in formato JSON. La response contiene lo stato della richiesta HTTP, che indica se l'operazione sia andata a buon fine o meno, e il JWT necessario per gli accessi futuri alle risorse.
 \subsection{myDefines.h}
 
 \begin{wrapfigure}{r}{6cm}
@@ -146,7 +146,7 @@ In primo luogo, il metodo prende in ingresso tre stringhe: url del server, usern
 	\label{myDefines}
 \end{wrapfigure}
 
-Una volta implementate le due classi wrapper \texttt{Connection\_windows} e \\\texttt{APIRest\_windows}, volendo mantenere la possibilità di passare da una piattaforma all'altra in modo rapido e semplice, si è scelto di creare un header file, \texttt{myDefines.h}, attraverso il quale fosse possibile decidere il target di esecuzione del proprio codice senza necessità di modificare ulteriori files. \texttt{myDefines.h} ha la struttura mostrata in figura \ref{myDefines}. Essa consiste semplicemente nella definizione della macro \texttt{ARDUINO} nel caso in cui si desideri compilare per tale piattaforma. Laddove invece tale macro non fosse definita, verrebbe scelta di default la compilazione per PC. \texttt{myDefines.h}, dovrà essere inclusa in tutti i file che utilizzano i metodi delle classi wrapper sopra descritte. All'interno di tali file, lo switch di piattaforma è gestito tramite direttive \texttt{\#ifdef}, come visibile in figura \ref{ifdef}.
+Una volta implementate le due classi wrapper \texttt{Connection\_windows} e \\\texttt{APIRest\_windows}, volendo mantenere la possibilità di passare da una piattaforma all'altra in modo rapido e semplice, si è scelto di creare un header file, \texttt{myDefines.h}, attraverso il quale fosse possibile decidere il target di esecuzione del proprio codice senza necessità di modificare ulteriori files. \texttt{myDefines.h} ha la struttura mostrata in figura \ref{myDefines}. Essa consiste semplicemente nella definizione della macro \texttt{ARDUINO} nel caso in cui si desideri compilare per tale piattaforma. Laddove invece tale macro non fosse definita, verrebbe scelta di default la compilazione per PC. \texttt{myDefines.h}, deve essere inclusa in tutti i file che utilizzano i metodi delle classi wrapper sopra descritte. All'interno di tali file, lo switch di piattaforma è gestito tramite direttive \texttt{\#ifdef}, come visibile in figura \ref{ifdef}.
 
 \begin{figure}[H]
 	\centering
@@ -155,15 +155,15 @@ Una volta implementate le due classi wrapper \texttt{Connection\_windows} e \\\t
 	\label{ifdef}
 \end{figure}
 
-In questa specifica situazione, nel caso in cui, come in figura, sia definita la macro \texttt{ARDUINO}, verranno create istanze delle classi \texttt{Connection} e \texttt{APIRest}, altrimenti delle classi \texttt{Connection\_windows} e \texttt{APIRest\_windows}.
+In questa specifica situazione, nel caso in cui, come in figura, sia definita la macro \texttt{ARDUINO}, vengono create istanze delle classi \texttt{Connection} e \texttt{APIRest}, altrimenti delle classi \texttt{Connection\_windows} e \texttt{APIRest\_windows}.
 \section{Esempio di prova}\label{prova}
 Dopo aver ultimato l’implementazione delle classi citate in precedenza, si è deciso di sviluppare un semplice main per PC che simulasse un’applicazione IoT per il monitoraggio della temperatura, al fine di testare quanto realizzato.
 
-Il device simulato possiede una feature: temperature. In prima istanza è necessario impostare tutti i parametri della descrizione virtuale e creare all'interno del Cloud la risorsa che rappresenti il dispositivo d’interesse. Dopodiché bisogna costruire gli scripts che si intende eseguire sui flussi di dati e assegnarli alla risorsa precedentemente creata sulle API di tale dispositivo. È necessario inoltre creare un utente (parametri username e password nel codice) sul Cloud attraverso il quale l'engine potrà autenticarsi.
+Il device simulato possiede una feature: temperature. In prima istanza è necessario impostare tutti i parametri della descrizione virtuale e creare all'interno del Cloud la risorsa che rappresenti il dispositivo d’interesse. Dopodiché bisogna costruire gli scripts che si intende eseguire sui flussi di dati e assegnarli alla risorsa precedentemente creata sulle API di tale dispositivo. È necessario inoltre aggiungere un utente (parametri username e password nel codice) sul Cloud attraverso il quale l'engine potrà autenticarsi.
 
-Il main è suddiviso in due fasi principali, associate alle funzioni  \texttt{setup} e  \texttt{loop} che richiamano la configurazione tipica degli sketch Arduino. Le procedure da svolgere nella funzione  \texttt{setup} sono la configurazione del sensore, l'avvio della connessione Internet e l'assegnazione dei parametri alla struttura dati \texttt{options} per inizializzare l'engine. Nella funzione \texttt{loop} invece, è disposta la creazione dei sample (connotati da features, data e valore letto dai sensori), poi processati dall'engine tramite gli script ricevuti dal Cloud. Tali script vengono eseguiti ciclicamente e il risultato delle operazioni portate a termine viene conservato sul Cloud. Il processo di interazione Cloud-Edge appena descritto è riassunto nella tabella \ref{loop}. In questo specifico caso, siccome si tratta di un esempio di test e non di un'applicazione reale, la funzione \texttt{loop} viene eseguita una volta sola, dal momento che l'interesse non è l'invio dei dati in maniera iterativa, ma di verificare il funzionamento di un singolo script.
+Il main è suddiviso in due fasi principali, associate alle funzioni \texttt{setup} e \texttt{loop} che richiamano la configurazione tipica degli sketch Arduino. Le procedure da svolgere nella funzione \texttt{setup} sono la configurazione del sensore, l'avvio della connessione Internet e l'assegnazione dei parametri alla struttura dati \texttt{options} per inizializzare l'engine. Nella funzione \texttt{loop} invece, è disposta la creazione dei sample (connotati da feature, data e valore letto dai sensori), poi processati dall'engine tramite gli script ricevuti dal Cloud. Tali script sono eseguiti ciclicamente e il risultato delle operazioni portate a termine viene conservato sul Cloud. Il processo di interazione Cloud-Edge appena descritto è riassunto nella tabella \ref{loop}. In questo specifico caso, siccome si tratta di un esempio di test e non di un'applicazione reale, la funzione \texttt{loop} viene eseguita una volta sola, dal momento che l'interesse non è l'invio dei dati in maniera iterativa, ma la verificare del funzionamento di un singolo script.
 
-Già da un esempio semplice come quello appena descritto, ci si può rendere conto di come la realizzazione di un'applicazione IoT servendosi di Edge Engine riduca in maniera drastica la quantità di codice da produrre e il tempo di sviluppo del software. Esso fornisce la possibilità non solo di eseguire in locale gli scripts caricati da remoto, ma anche di inviare e ricevere delle informazioni dal Cloud e gestire eventuali malfunzionamenti comunicandone l'avvenimento al server online.
+Già da un esempio semplice come quello appena descritto, ci si può rendere conto di come la realizzazione di un'applicazione IoT servendosi di Edge Engine riduca in maniera drastica la quantità di codice da produrre e il tempo di sviluppo del software. Esso fornisce la possibilità non solo di eseguire in locale gli script caricati da remoto, ma anche di inviare e ricevere delle informazioni dal Cloud e gestire eventuali malfunzionamenti, comunicandone l'avvenimento al server online.
 
 \begin{table}[H]
 	\centering
@@ -183,7 +183,7 @@ Già da un esempio semplice come quello appena descritto, ci si può rendere con
 \end{table}
 
 \section{Creazione della libreria}
-Come è stato possibile notare nella sezione \ref{utilizzo}, il sistema, per poter essere utilizzato, necessita della compilazione di tutte le classi del progetto, andando dunque a rendere obbligatoria anche la presenza dei file \texttt{.cpp} oltre agli header all'interno del proprio ambiente di sviluppo. Questa procedura è assai utile in fase di sviluppo del sistema, dal momento che in questo modo è possibile agire direttamente sulle classi in caso di errori o necessità di cambiamenti al codice. Tuttavia, non lo è altrettanto nel caso di utilizzo dell'Edge Engine da parte di sviluppatori che desiderino farne uso senza volontà di applicare modifiche al codice sorgente o qualora si desideri che la propria implementazione dei vari metodi non sia visibile a chi ne usufruisce.
+Come è stato possibile notare nella sezione \ref{utilizzo}, il sistema, per poter essere utilizzato, necessita della compilazione di tutte le classi del progetto, andando dunque a rendere obbligatoria anche la presenza dei file \texttt{.cpp} (oltre agli header) all'interno del proprio ambiente di sviluppo. Questa procedura è assai utile in fase di implementazione del sistema, dal momento che in questo modo è possibile agire direttamente sulle classi in caso di errori o necessità di cambiamenti al codice. Tuttavia, non lo è altrettanto nel caso di utilizzo dell'Edge Engine da parte di sviluppatori che desiderino farne uso senza volontà di applicare modifiche al codice sorgente o qualora si desideri che la propria implementazione dei vari metodi non sia visibile a chi ne usufruisce.
 
 Di conseguenza, si è deciso di creare un file \texttt{.lib} grazie al quale è facilitata la fruizione del sistema da parte di altri sviluppatori e, al contempo, viene nascosta la realizzazione relativa alle classi appartenenti al progetto.
 
@@ -207,7 +207,7 @@ ar rcs Edgine.lib APIRest_windows.o connection_windows.o [...]
       window.o
 \end{verbatim}
 
-I primi passaggi, da ripetere per ogni classe presente all'interno del progetto, producono per ognuna il relativo file in formato \texttt{.o}, necessario per la successiva creazione del \texttt{.lib}. Il comando \texttt{ar} poi, a partire da i file \texttt{.o} appena creati, genera la libreria \texttt{Edgine.lib}. Infine, per poterla utilizzare all'interno del proprio progetto, sono necessarie le seguenti direttive per il compilatore:
+I primi passaggi, da ripetere per ogni classe presente all'interno del progetto, producono per ognuna di esse il relativo file in formato \texttt{.o}, necessario per la successiva creazione del \texttt{.lib}. Il comando \texttt{ar} poi, a partire da i file \texttt{.o} appena creati, genera la libreria \texttt{Edgine.lib}. Infine, per poterla utilizzare all'interno del proprio progetto, sono necessarie le seguenti direttive per il compilatore:
 
 \begin{verbatim}
 -g
