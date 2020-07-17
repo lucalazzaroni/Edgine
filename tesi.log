@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  16 JUL 2020 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.15)  17 JUL 2020 12:08
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -647,105 +647,56 @@ This may cause the page layout to be inconsistent, however.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 83.
+(hyperref)                removing `\begingroup' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 83.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 83.
+(hyperref)                removing `\mathsurround' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 83.
+(hyperref)                removing `\z@' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 83.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 83.
+(hyperref)                removing `\endgroup' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 83.
+(hyperref)                removing `\begingroup' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 83.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 83.
+(hyperref)                removing `\mathsurround' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 83.
+(hyperref)                removing `\z@' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 83.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 83.
+(hyperref)                removing `\endgroup' on input line 95.
 
 [1
 
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 90.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 90.
-
-[2]
 \openout2 = `Abstract.aux'.
 
  (Abstract.tex
@@ -797,7 +748,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\endgroup' on input line 25.
 
-[3
+[2
 
 
 
@@ -850,7 +801,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\endgroup' on input line 23.
 
-[4
+[3
 
 
 
@@ -861,77 +812,53 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 99.
+(hyperref)                removing `\begingroup' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 99.
+(hyperref)                removing `\mathsurround' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 99.
+(hyperref)                removing `\z@' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 99.
+(hyperref)                removing `\endgroup' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 99.
+(hyperref)                removing `\begingroup' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 99.
+(hyperref)                removing `\mathsurround' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 99.
+(hyperref)                removing `\z@' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 99.
+(hyperref)                removing `math shift' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 99.
+(hyperref)                removing `\endgroup' on input line 104.
 
-[5] (tesi.lof
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 25.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 25.
-
+[4] (tesi.lof
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\begingroup' on input line 25.
@@ -956,7 +883,31 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\endgroup' on input line 25.
 
-[6
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathsurround' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 25.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\endgroup' on input line 25.
+
+[5
 
 ])
 \tf@lof=\write5
@@ -965,106 +916,106 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 100.
+(hyperref)                removing `\begingroup' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 100.
+(hyperref)                removing `\mathsurround' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 100.
+(hyperref)                removing `\z@' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 100.
+(hyperref)                removing `\endgroup' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 100.
+(hyperref)                removing `\begingroup' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 100.
+(hyperref)                removing `\mathsurround' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 100.
+(hyperref)                removing `\z@' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 105.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 100.
+(hyperref)                removing `\endgroup' on input line 105.
 
-[7] (tesi.lot)
+[6] (tesi.lot)
 \tf@lot=\write6
 \openout6 = `tesi.lot'.
 
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 101.
+(hyperref)                removing `\begingroup' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 101.
+(hyperref)                removing `\mathsurround' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 101.
+(hyperref)                removing `\z@' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 101.
+(hyperref)                removing `\endgroup' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 101.
+(hyperref)                removing `\begingroup' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 101.
+(hyperref)                removing `\mathsurround' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 101.
+(hyperref)                removing `\z@' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 101.
+(hyperref)                removing `\endgroup' on input line 106.
 
-[8
+[7
 
 ]
 \openout2 = `Introduzione.aux'.
@@ -1083,7 +1034,7 @@ l.8 	\item \textbf
 
 
 ]
-<pics/edgecomputing.jpeg, id=247, 678.535pt x 381.425pt>
+<pics/edgecomputing.jpeg, id=243, 678.535pt x 381.425pt>
 File: pics/edgecomputing.jpeg Graphic file (type jpg)
 <use pics/edgecomputing.jpeg>
 Package pdftex.def Info: pics/edgecomputing.jpeg  used on input line 15.
@@ -1094,13 +1045,13 @@ been already used, duplicate ignored
                    \relax 
 l.21 
       [2 <./pics/edgecomputing.jpeg>]
-<pics/edgevscloud.jpeg, id=253, 715.17188pt x 161.85469pt>
+<pics/edgevscloud.jpeg, id=249, 715.17188pt x 161.85469pt>
 File: pics/edgevscloud.jpeg Graphic file (type jpg)
 <use pics/edgevscloud.jpeg>
 Package pdftex.def Info: pics/edgevscloud.jpeg  used on input line 24.
 (pdftex.def)             Requested size: 398.34372pt x 88.34364pt.
  [3 <./pics/edgevscloud.jpeg>]
-<pics/edgine.png, id=260, 1267.73625pt x 543.53062pt>
+<pics/edgine.png, id=255, 1267.73625pt x 543.53062pt>
 File: pics/edgine.png Graphic file (type png)
 <use pics/edgine.png>
 Package pdftex.def Info: pics/edgine.png  used on input line 43.
@@ -1116,7 +1067,7 @@ Capitolo 2.
 
 
 ] [7] [8] [9]
-<pics/edgineCP.png, id=326, 1267.73625pt x 868.74562pt>
+<pics/edgineCP.png, id=321, 1267.73625pt x 868.74562pt>
 File: pics/edgineCP.png Graphic file (type png)
 <use pics/edgineCP.png>
 Package pdftex.def Info: pics/edgineCP.png  used on input line 34.
@@ -1126,7 +1077,7 @@ Package pdftex.def Info: pics/edgineCP.png  used on input line 34.
 
  (Contestodisviluppo.tex
 Capitolo 3.
-<pics/edgestructure.png, id=337, 723.45282pt x 465.23813pt>
+<pics/edgestructure.png, id=333, 723.45282pt x 465.23813pt>
 File: pics/edgestructure.png Graphic file (type png)
 <use pics/edgestructure.png>
 Package pdftex.def Info: pics/edgestructure.png  used on input line 7.
@@ -1136,23 +1087,23 @@ Package pdftex.def Info: pics/edgestructure.png  used on input line 7.
 
 
  <./pics/edgestructure.png>] [13]
-<pics/cloudAPI.png, id=347, 523.9575pt x 326.4195pt>
+<pics/cloudAPI.png, id=343, 654.94687pt x 408.02437pt>
 File: pics/cloudAPI.png Graphic file (type png)
 <use pics/cloudAPI.png>
 Package pdftex.def Info: pics/cloudAPI.png  used on input line 31.
-(pdftex.def)             Requested size: 398.3386pt x 248.16606pt.
+(pdftex.def)             Requested size: 398.3386pt x 248.15984pt.
  [14 <./pics/cloudAPI.png>] [15]
-<pics/edgearch.png, id=361, 546.843pt x 322.20375pt>
+<pics/edgearch.png, id=354, 546.843pt x 322.20375pt>
 File: pics/edgearch.png Graphic file (type png)
 <use pics/edgearch.png>
 Package pdftex.def Info: pics/edgearch.png  used on input line 55.
 (pdftex.def)             Requested size: 398.3386pt x 234.71513pt.
  [16]
-<pics/arduinodependent.png, id=367, 356.532pt x 118.64325pt>
+<pics/arduinodependent.png, id=362, 445.665pt x 148.30406pt>
 File: pics/arduinodependent.png Graphic file (type png)
 <use pics/arduinodependent.png>
 Package pdftex.def Info: pics/arduinodependent.png  used on input line 67.
-(pdftex.def)             Requested size: 356.53111pt x 118.64294pt.
+(pdftex.def)             Requested size: 398.3386pt x 132.55591pt.
 
 [17 <./pics/edgearch.png>]) [18 <./pics/arduinodependent.png>]
 \openout2 = `Implementazione.aux'.
@@ -1177,19 +1128,19 @@ h:15,[]
  []
 
 [20] [21] [22] [23] [24] [25]
-<pics/connAW.png, id=420, 951.555pt x 566.115pt>
+<pics/connAW.png, id=414, 951.555pt x 566.115pt>
 File: pics/connAW.png Graphic file (type png)
 <use pics/connAW.png>
 Package pdftex.def Info: pics/connAW.png  used on input line 121.
 (pdftex.def)             Requested size: 398.3386pt x 236.98924pt.
  [26] [27 <./pics/connAW.png>]
-<pics/APIRestAW.png, id=431, 1108.8928pt x 703.87968pt>
+<pics/APIRestAW.png, id=424, 1108.8928pt x 703.87968pt>
 File: pics/APIRestAW.png Graphic file (type png)
 <use pics/APIRestAW.png>
 Package pdftex.def Info: pics/APIRestAW.png  used on input line 133.
 (pdftex.def)             Requested size: 398.3386pt x 252.84872pt.
  [28 <./pics/APIRestAW.png>]
-<pics/myDefines.png, id=436, 138.5175pt x 100.87688pt>
+<pics/myDefines.png, id=430, 138.5175pt x 100.87688pt>
 File: pics/myDefines.png Graphic file (type png)
 <use pics/myDefines.png>
 Package pdftex.def Info: pics/myDefines.png  used on input line 144.
@@ -1199,7 +1150,7 @@ Underfull \hbox (badness 1077) in paragraph at lines 149--150
 \OT1/cmr/m/n/12 ma al-l'al-tra in mo-do ra-pi-do e sem-pli-
  []
 
-<pics/ifdef.png, id=439, 254.75175pt x 133.6995pt>
+<pics/ifdef.png, id=433, 254.75175pt x 133.6995pt>
 File: pics/ifdef.png Graphic file (type png)
 <use pics/ifdef.png>
 Package pdftex.def Info: pics/ifdef.png  used on input line 153.
@@ -1279,7 +1230,7 @@ Overfull \hbox (1.30063pt too wide) in paragraph at lines 33--56
  []
 
 [35] [36]
-<pics/datowin.png, id=482, 277.035pt x 272.51813pt>
+<pics/datowin.png, id=476, 277.035pt x 272.51813pt>
 File: pics/datowin.png Graphic file (type png)
 <use pics/datowin.png>
 Package pdftex.def Info: pics/datowin.png  used on input line 72.
@@ -1290,7 +1241,7 @@ Overfull \hbox (3.0366pt too wide) in paragraph at lines 109--109
 vice,[] 
  []
 
-<pics/ring.png, id=500, 299.31825pt x 196.3335pt>
+<pics/ring.png, id=494, 299.31825pt x 196.3335pt>
 File: pics/ring.png Graphic file (type png)
 <use pics/ring.png>
 Package pdftex.def Info: pics/ring.png  used on input line 120.
@@ -1305,7 +1256,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--144
 
  []
 
-<pics/unityscriptvars.png, id=513, 226.446pt x 125.268pt>
+<pics/unityscriptvars.png, id=507, 226.446pt x 125.268pt>
 File: pics/unityscriptvars.png Graphic file (type png)
 <use pics/unityscriptvars.png>
 Package pdftex.def Info: pics/unityscriptvars.png  used on input line 154.
@@ -1318,25 +1269,25 @@ Overfull \hbox (1.21938pt too wide) in paragraph at lines 161--162
  []
 
 [44]
-<pics/startupdate.png, id=526, 732.48656pt x 200.24812pt>
+<pics/startupdate.png, id=520, 732.48656pt x 200.24812pt>
 File: pics/startupdate.png Graphic file (type png)
 <use pics/startupdate.png>
 Package pdftex.def Info: pics/startupdate.png  used on input line 186.
 (pdftex.def)             Requested size: 398.3386pt x 108.8993pt.
  [45 <./pics/startupdate.png>]
-<pics/measunity.png, id=533, 280.04625pt x 272.51813pt>
+<pics/measunity.png, id=526, 280.04625pt x 272.51813pt>
 File: pics/measunity.png Graphic file (type png)
 <use pics/measunity.png>
 Package pdftex.def Info: pics/measunity.png  used on input line 199.
 (pdftex.def)             Requested size: 196.03102pt x 190.76138pt.
  [46 <./pics/measunity.png>]
-<pics/esp8266cloud.png, id=539, 753.5653pt x 491.58656pt>
+<pics/esp8266cloud.png, id=533, 753.5653pt x 491.58656pt>
 File: pics/esp8266cloud.png Graphic file (type png)
 <use pics/esp8266cloud.png>
 Package pdftex.def Info: pics/esp8266cloud.png  used on input line 209.
 (pdftex.def)             Requested size: 398.3386pt x 259.84953pt.
  [47 <./pics/esp8266cloud.png>]
-<pics/measacquario.png, id=545, 274.77657pt x 272.51813pt>
+<pics/measacquario.png, id=539, 274.77657pt x 272.51813pt>
 File: pics/measacquario.png Graphic file (type png)
 <use pics/measacquario.png>
 Package pdftex.def Info: pics/measacquario.png  used on input line 227.
@@ -1351,26 +1302,26 @@ Capitolo 6.
 
 
 
-]) [51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+] [51]) [52]
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
 []$\OT1/cmtt/m/n/12 https : / / www . iotedge . it / edge -[] platform / ledge 
 -[] computing -[] puo -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--125
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
 []$\OT1/cmtt/m/n/12 https : / / cloud . google . com / blog / products / gcp / 
 bringing -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
 []$\OT1/cmtt/m/n/12 https : / / docs . aws . amazon . com / it _ it / lambda / 
 latest / dg / welcome .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
 []$\OT1/cmtt/m/n/12 https : / / www . microsoft . com / en -[] us / research / 
 project / project -[]
  []
@@ -1380,45 +1331,45 @@ project / project -[]
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
 []$\OT1/cmtt/m/n/12 https : / / www . redhat . com / it / technologies / cloud 
 -[] computing /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
 []$\OT1/cmtt/m/n/12 https : / / link . springer . com / chapter / 10 . 1007 / 9
 78 -[] 3 -[] 030 -[] 01168 -[]
  []
 
 [54]
-Underfull \hbox (badness 10000) in paragraph at lines 191--193
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
 []$\OT1/cmtt/m/n/12 http : / / www . hackster . io / news / ai -[] technology -
 [] helping -[] asthma -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
 []$\OT1/cmtt/m/n/12 https : / / docs . microsoft . com / it -[] it / cpp / buil
 d / vcpkg ? view = vs -[]
  []
 
-[55]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
- [56]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
- (tesi.aux (Abstract.aux) (Introduzione.aux) (Statodellarte.aux)
-(Contestodisviluppo.aux) (Implementazione.aux) (Esperimenti.aux)
-(Conclusionielavorifuturi.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+[55] [56] [57]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
+ [58]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
+ (tesi.aux (Abstract.aux) (Introduzione.aux)
+(Statodellarte.aux) (Contestodisviluppo.aux) (Implementazione.aux)
+(Esperimenti.aux) (Conclusionielavorifuturi.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 8018B68F5B05733292FD46EFE0E09CA4;1421.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 12338 strings out of 480896
- 219607 string characters out of 2908248
+ 12339 strings out of 480896
+ 219612 string characters out of 2908248
  509161 words of memory out of 3000000
  27792 multiletter control sequences out of 15000+200000
  540679 words of font info for 53 fonts, out of 3000000 for 9000
@@ -1434,9 +1385,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9
 e1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb>
-Output written on tesi.pdf (66 pages, 1490554 bytes).
+Output written on tesi.pdf (67 pages, 1476272 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 
